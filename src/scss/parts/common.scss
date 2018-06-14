@@ -1,0 +1,20 @@
+* {
+  box-sizing: border-box;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Lato Regular";
+}
+.lock {
+  overflow: hidden;
+}
+a {
+    color: #000;
+    outline: 0;
+    overflow: hidden;
+    text-decoration: none;
+}
+
