@@ -58,37 +58,15 @@ $(document).ready(function(){
     })(jQuery);
 
     function runMobile(){
-        $('.js-filter-modal.left-side').hide();
-        $('h3.js-filter-toggle').on('click', filterCategoryMobileOpen);
-        $('.js-close-filter-contain').on('click', filterCategoryMobileClose);
-        $('.refinements-wrapper .refinement>div').mCustomScrollbar('destroy');
 
-        $('.checkout-mini-cart').mCustomScrollbar(); //Скролл в оформлении заказа
     }
 
     function runTablet(){
-        // console.log(state.device);
-        $('h3.js-filter-toggle').unbind('click', filterCategoryMobileOpen);
-        $('.js-close-filter-contain').unbind('click', filterCategoryMobileClose);
-        $('.refinements-wrapper .refinement>div').mCustomScrollbar();
-        // $('.js-filter-modal.left-side').show();
-        // $('.js-filter-toggle').unbind('click', filterOpen);
-        // $(document).unbind('mouseup', filterClose);
-        //$('.js-filter-toggle').closest('.refinement').addClass('opened');
 
-        $('.checkout-mini-cart').mCustomScrollbar(); //Скролл в оформлении заказа
-        $('.js-mini-cart-products, .search-window').mCustomScrollbar(); //Поиск, корзина скролл
     }
 
     function runDesctop(){
-        $('h3.js-filter-toggle').unbind('click', filterCategoryMobileOpen);
-        $('.js-close-filter-contain').unbind('click', filterCategoryMobileClose);
-        $('.refinements-wrapper .refinement>div').mCustomScrollbar('destroy');
-        $('.js-filter-toggle').on('click', filterOpen);
-        $(document).on('mouseup', filterClose);
 
-        $('.checkout-mini-cart').mCustomScrollbar(); //Скролл в оформлении заказа
-        $('.js-mini-cart-products, .search-window').mCustomScrollbar(); //Поиск, корзина скролл
     }
 
     $(window).getDevice(768,1024);
@@ -588,6 +566,6 @@ $(document).ready(function(){
        $(window).scroll();
     });
 
-    $(window).scroll();w
+    $(window).scroll();
     /*--конец Фиксированый хедер--*/
 });

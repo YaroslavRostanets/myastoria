@@ -58,37 +58,15 @@ $(document).ready(function(){
     })(jQuery);
 
     function runMobile(){
-        $('.js-filter-modal.left-side').hide();
-        $('h3.js-filter-toggle').on('click', filterCategoryMobileOpen);
-        $('.js-close-filter-contain').on('click', filterCategoryMobileClose);
-        $('.refinements-wrapper .refinement>div').mCustomScrollbar('destroy');
 
-        $('.checkout-mini-cart').mCustomScrollbar(); //Скролл в оформлении заказа
     }
 
     function runTablet(){
-        // console.log(state.device);
-        $('h3.js-filter-toggle').unbind('click', filterCategoryMobileOpen);
-        $('.js-close-filter-contain').unbind('click', filterCategoryMobileClose);
-        $('.refinements-wrapper .refinement>div').mCustomScrollbar();
-        // $('.js-filter-modal.left-side').show();
-        // $('.js-filter-toggle').unbind('click', filterOpen);
-        // $(document).unbind('mouseup', filterClose);
-        //$('.js-filter-toggle').closest('.refinement').addClass('opened');
 
-        $('.checkout-mini-cart').mCustomScrollbar(); //Скролл в оформлении заказа
-        $('.js-mini-cart-products, .search-window').mCustomScrollbar(); //Поиск, корзина скролл
     }
 
     function runDesctop(){
-        $('h3.js-filter-toggle').unbind('click', filterCategoryMobileOpen);
-        $('.js-close-filter-contain').unbind('click', filterCategoryMobileClose);
-        $('.refinements-wrapper .refinement>div').mCustomScrollbar('destroy');
-        $('.js-filter-toggle').on('click', filterOpen);
-        $(document).on('mouseup', filterClose);
 
-        $('.checkout-mini-cart').mCustomScrollbar(); //Скролл в оформлении заказа
-        $('.js-mini-cart-products, .search-window').mCustomScrollbar(); //Поиск, корзина скролл
     }
 
     $(window).getDevice(768,1024);
@@ -588,186 +566,6 @@ $(document).ready(function(){
        $(window).scroll();
     });
 
-    $(window).scroll();w
+    $(window).scroll();
     /*--конец Фиксированый хедер--*/
 });
-window.sizesEvents=function() {
-    var sizes = {
-        'product-line': {
-            '0210': 'Женщины',
-            '0310': 'Мужчины',
-            '1210': 'Denim Женщины',
-            '1310': 'Denim Мужчины'
-        },
-        'groups': {
-            '0210-0001': 'Футболка, Топ, Толстовка, Пулловер',
-            '0210-0002': 'Куртка',
-            '0210-0003': 'Блуза, Блейзер, Платье',
-            '0210-0004': 'Брюки',
-            '0210-0005': 'Джинсы',
-            '0210-0006': 'Юбка',
-            '0310-0001': 'Футболка, Топ, Толстовка, Пулловер',
-            '0310-0002': 'Куртка, Рубашка',
-            '0310-0003': 'Брюки, Джинсы',
-            '1210-0001': 'Футболка, Топ, Толстовка, Пулловер',
-            '1210-0002': 'Куртка',
-            '1210-0003': 'Блуза, Блейзер, Платье',
-            '1210-0004': 'Брюки, Джинсы',
-            '1210-0005': 'Юбка',
-            '1310-0001': 'Футболка, Топ, Толстовка, Пулловер',
-            '1310-0002': 'Куртка, Рубашка',
-            '1310-0003': 'Брюки, Джинсы'
-        },
-        'breast': {
-            '0210-0001': ['74-77', '78-81', '82-85', '86-89', '90-93', '94-97', '98-102', '103-106'],
-            '0210-0002': ['74-77', '78-81', '82-85', '86-89', '90-93', '94-97', '98-102', '103-106'],
-            '0210-0003': ['74-77', '78-81', '82-85', '86-89', '90-93', '94-97', '98-102', '103-106'],
-            '0310-0001': ['81-86', '87-92', '93-98', '99-104', '105-110', '111-116', '117-122'],
-            '0310-0002': ['81-86', '87-92', '93-98', '99-104', '105-110', '111-116', '117-122'],
-            '1210-0001': ['74-77', '78-81', '82-85', '86-89', '90-93', '94-97'],
-            '1210-0002': ['74-77', '78-81', '82-85', '86-89', '90-93', '94-97'],
-            '1210-0003': ['74-77', '78-81', '82-85', '86-89', '90-93', '94-97'],
-            '1310-0001': ['81-86', '87-92', '93-98', '99-104', '105-110', '111-116'],
-            '1310-0002': ['81-86', '87-92', '93-98', '99-104', '105-110', '111-116']
-        },
-        'waist': {
-            '0210-0001': ['58-61', '62-65', '66-69', '70-73', '74-77', '78-81', '82-86', '87-90'],
-            '0210-0002': ['58-61', '62-65', '66-69', '70-73', '74-77', '78-81', '82-86', '87-90'],
-            '0210-0003': ['58-61', '62-65', '66-69', '70-73', '74-77', '78-81', '82-86', '87-90'],
-            '0210-0004': ['58-61', '62-65', '66-69', '70-73', '74-77', '78-81', '82-86', '87-90'],
-            '0210-0005': ['59-61', '62-64', '65-67', '68-70', '71-73', '74-76', '77-79', '80-82', '83-85', '86-89', '90-94'],
-            '0210-0006': ['58-61', '62-65', '66-69', '70-73', '74-77', '78-81', '82-86', '87-90'],
-            '0310-0001': ['69-74', '75-80', '81-86', '87-92', '93-98', '99-104', '105-110'],
-            '0310-0002': ['69-74', '75-80', '81-86', '87-92', '93-98', '99-104', '105-110'],
-            '0310-0003': ['67-69', '70-71', '72-74', '75-76', '77-79', '80-81', '82-84', '85-86', '87-89', '90-94', '95-99', '100-104', '105-109', '110-114'],
-            '1210-0001': ['57-60', '61-64', '65-68', '69-72', '73-76', '77-80'],
-            '1210-0002': ['57-60', '61-64', '65-68', '69-72', '73-76', '77-80'],
-            '1210-0003': ['57-60', '61-64', '65-68', '69-72', '73-76', '77-80'],
-            '1210-0004': ['56-58', '59-61', '62-64', '65-67', '68-70', '71-73', '74-76', '77-79', '80-82', '83-85'],
-            '1210-0005': ['57-60', '61-64', '65-68', '69-72', '73-76', '77-80'],
-            '1310-0001': ['69-74', '75-80', '81-86', '87-92', '93-98', '99-104'],
-            '1310-0002': ['69-74', '75-80', '81-86', '87-92', '93-98', '99-104'],
-            '1310-0003': ['75-76', '77-79', '80-81', '82-84', '85-86', '87-89', '90-94', '95-99']
-        },
-        'hips': {
-            '0210-0002': ['84-87', '88-91', '92-95', '96-99', '100-103', '104-107', '108-112', '113-116'],
-            '0210-0003': ['84-87', '88-91', '92-95', '96-99', '100-103', '104-107', '108-112', '113-116'],
-            '0210-0004': ['84-87', '88-91', '92-95', '96-99', '100-103', '104-107', '108-112', '113-116'],
-            '0210-0005': ['85-87', '88-90', '91-93', '94-96', '97-99', '100-102', '103-105', '106-108', '109-111', '112-115', '116-120'],
-            '0210-0006': ['84-87', '88-91', '92-95', '96-99', '100-103', '104-107', '108-112', '113-116'],
-            '0310-0002': ['85-90', '91-96', '97-102', '103-108', '109-114', '115-120', '121-126'],
-            '0310-0003': ['83-85', '86-87', '88-90', '91-92', '93-95', '96-97', '98-100', '101-102', '103-105', '106-110', '111-115', '116-120', '121-125', '126-130'],
-            '1210-0002': ['84-87', '88-91', '92-95', '96-99', '100-103', '104-107'],
-            '1210-0003': ['84-87', '88-91', '92-95', '96-99', '100-103', '104-107'],
-            '1210-0004': ['82-84', '85-87', '88-90', '91-93', '94-96', '97-99', '100-102', '103-105', '106-108', '109-111'],
-            '1210-0005': ['84-87', '88-91', '92-95', '96-99', '100-103', '104-107'],
-            '1310-0002': ['85-90', '91-96', '97-102', '103-108', '109-114', '115-120'],
-            '1310-0003': ['91-92', '93-95', '96-97', '98-100', '101-102', '103-105', '106-110', '111-115']
-        }
-    };
-
-    Array.max = function(array) {
-        return Math.max.apply(Math, array);
-    }
-
-    function reset_select($this) {
-        $('option', $this).detach();
-        $this.append('<option value="0">---------</option>').attr('disabled', 'disabled');
-    }
-    function set_values($this, $data, $match) {
-
-        if ($.type($data) == 'undefined')
-            return;
-        $this.removeAttr('disabled');
-        $('option:gt(0)', $this).detach();
-        if ($.type($data) == 'object')
-            for (var $k in $data) {
-                if (typeof $data[$k] !== "function") {
-                    if ($match && !$k.indexOf($match) == 0)
-                        continue;
-                    $this.append('<option value="' + $k + '">' + $data[$k] + '</option>');
-                }
-
-            }
-        else {
-            for (var $i = 0, $s = $data.length; $i < $s; $i++) {
-                if (typeof $data[$i] !== "function")
-                    $this.append('<option value="' + $match + '">' + $data[$i] + '</option>');
-            }
-        }
-    }
-
-    var $items = $('select', $('#sizes')),
-        $hidden = $('.hidden').css('display', 'none');
-
-    $items.each(function($i) {
-        reset_select($(this));
-    });
-
-    var product_line = $('#product-line').attr('disabled', ''),
-        $groups = $('#group'),
-        $breast = $('#breast'),
-        $waist = $('#waist'),
-        $hips = $('#hips');
-
-    set_values(product_line, sizes['product-line']);
-    product_line.change(function() {
-
-        reset_select($groups);
-        reset_select($breast);
-        reset_select($waist);
-        reset_select($hips);
-        $hidden.css('display', 'none');
-
-        if ($(this).val()) {
-            $groups.attr('disabled', '');
-            set_values($groups, sizes['groups'], $(this).val());
-        }
-    });
-
-    $groups.change(function() {
-        reset_select($breast);
-        reset_select($waist);
-        reset_select($hips);
-        $hidden.css('display', 'none');
-
-        var $val = $(this).val();
-
-        if ($val) {
-            $breast.attr('disabled', '');
-            $waist.attr('disabled', '');
-            $hips.attr('disabled', '');
-
-            set_values($breast, sizes['breast'][$val], $val);
-            set_values($waist, sizes['waist'][$val], $val);
-            set_values($hips, sizes['hips'][$val], $val);
-        }
-    });
-
-    $breast.change(function() {
-        var $max = Array.max([$waist[0].selectedIndex, $hips[0].selectedIndex]),
-            $current = $(this)[0].selectedIndex;
-        if ($current >= $max) {
-            $hidden.css('display', 'none');
-            $('#' + $(this).val() + ' > div:eq(' + ($current - 1) + ')').css('display', 'block');
-        }
-    });
-    $waist.change(function() {
-        var $max = Array.max([$breast[0].selectedIndex, $hips[0].selectedIndex]),
-            $current = $(this)[0].selectedIndex;
-        if ($current >= $max) {
-            $hidden.css('display', 'none');
-            $('#' + $(this).val() + ' > div:eq(' + ($current - 1) + ')').css('display', 'block');
-        }
-    });
-    $hips.change(function() {
-        var $max = Array.max([$breast[0].selectedIndex, $waist[0].selectedIndex]),
-            $current = $(this)[0].selectedIndex;
-        if ($current >= $max) {
-            $hidden.css('display', 'none');
-            $('#' + $(this).val() + ' > div:eq(' + ($current - 1) + ')').css('display', 'block');
-        }
-    });
-}
-$(sizesEvents);
-

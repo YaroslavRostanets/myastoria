@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="dist/font/stylesheet.css">
     <link rel="stylesheet" href="dist/libs/slick.css">
     <link rel="stylesheet" href="dist/libs/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="dist/libs/jquery.formstyler.css">
+    <link rel="stylesheet" href="dist/libs/jquery.formstyler.theme.css">
     <link rel="stylesheet" href="dist/css/main.min.css">
     <script
             src="https://code.jquery.com/jquery-1.12.4.min.js"
@@ -18,12 +20,431 @@
 <body>
     <header>
             <div class="container">
-
+                <div class="top-part">
+                    <a href="" class="phone">
+                        (067) 808-45-21
+                    </a>
+                    <a href="" class="logo">
+                        <img src="dist/img/logo.png" alt="">
+                    </a>
+                    <div class="controlls">
+                        <a href="javascript:void(0);" class="search">
+                            <img src="dist/img/seach.png" alt="">
+                        </a>
+                        <a class="cart">
+                            <img src="dist/img/card.png" alt="">
+                            <span class="total">2</span>
+                        </a>
+                        <a href="" class="sign-in">Войти</a>
+                    </div>
+                </div>
+                <div class="bot-part">
+                    <ul class="nav">
+                        <li>
+                            <a href="#">Сырая продукция</a>
+                        </li>
+                        <li>
+                            <a href="#">Готовая продукция</a>
+                        </li>
+                        <li>
+                            <a href="#">Акции</a>
+                        </li>
+                        <li>
+                            <a href="#">Доставка и оплата</a>
+                        </li>
+                        <li>
+                            <a href="#">Полезно о мясе</a>
+                        </li>
+                        <li>
+                            <a href="#">О нас</a>
+                        </li>
+                        <li>
+                            <a href="#">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </header>
     <main>
         <div class="catalog-main">
+            <div class="baner">
+                <div class="container">
+                    <ul class="breadcrumbs">
+                        <li>
+                            <a href="#">Главная страница</a>
+                        </li>
+                        <li>Стейки</li>
+                    </ul>
+                    <div class="page-title-container">
+                        <h1>Стейки</h1>
+                        <div class="after-title">
+                            Более 150 видов стейков от 40 грн
+                        </div>
+                    </div>
+                    <img src="dist/img/main_banner.png" alt="">
+                </div>
+            </div>
+            <div class="catalog-tiles-container">
+                <div class="container">
+                    <div class="sort">
+                        Сортировать:
+                        <select data-styler>
+                            <option>По популярности</option>
+                            <option>По цене</option>
+                        </select>
+                    </div>
+                    <div class="tiles-wrap">
+                        <div class="catalog-tile">
+                            <div class="catalog-tile-in" >
+                                <a href="#" class="img-cont">
+                                    <div class="img"
+                                         style="background-image: url(dist/img/content/thumb1.jpg)"></div>
+                                    <h5 class="prod-name">
+                                        Стейк Оссобуко выдержанный
+                                    </h5>
+                                </a>
+                                <div class="rank-review">
+                                    <div class="rank">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="reviews">
+                                        Отзывы: 5
+                                    </div>
+                                </div>
+                                <div class="product-price">
+                                    Цена: <span>65.00 грн/100г</span>
+                                </div>
+                                <button class="md-btn md-btn-raised md-btn-ripple">
+                                    Купить
+                                </button>
+                                <div class="text">
+                                    Стейк Оссобуко – это стейк толщиной 4-5 см из
+                                    верхней части голяшки (Shank), в середине
+                                    которого расположена полая кость с большим
+                                    количеством костного мозга, что и придает этому
+                                    стейку главную изюминку.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalog-tile">
+                            <div class="catalog-tile-in" >
+                                <a href="#" class="img-cont">
+                                    <div class="img"
+                                         style="background-image: url(dist/img/content/thumb1.jpg)"></div>
+                                    <h5 class="prod-name">
+                                        Стейк Оссобуко выдержанный
+                                    </h5>
+                                </a>
+                                <div class="rank-review">
+                                    <div class="rank">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="reviews">
+                                        Отзывы: 5
+                                    </div>
+                                </div>
+                                <div class="product-price">
+                                    Цена: <span>65.00 грн/100г</span>
+                                </div>
+                                <button class="md-btn md-btn-raised md-btn-ripple">
+                                    Купить
+                                </button>
+                                <div class="text">
+                                    Стейк Оссобуко – это стейк толщиной 4-5 см из
+                                    верхней части голяшки (Shank), в середине
+                                    которого расположена полая кость с большим
+                                    количеством костного мозга, что и придает этому
+                                    стейку главную изюминку.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalog-tile">
+                            <div class="catalog-tile-in" >
+                                <a href="#" class="img-cont">
+                                    <div class="img"
+                                         style="background-image: url(dist/img/content/thumb1.jpg)"></div>
+                                    <h5 class="prod-name">
+                                        Стейк Оссобуко выдержанный
+                                    </h5>
+                                </a>
+                                <div class="rank-review">
+                                    <div class="rank">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="reviews">
+                                        Отзывы: 5
+                                    </div>
+                                </div>
+                                <div class="product-price">
+                                    Цена: <span>65.00 грн/100г</span>
+                                </div>
+                                <button class="md-btn md-btn-raised md-btn-ripple">
+                                    Купить
+                                </button>
+                                <div class="text">
+                                    Стейк Оссобуко – это стейк толщиной 4-5 см из
+                                    верхней части голяшки (Shank), в середине
+                                    которого расположена полая кость с большим
+                                    количеством костного мозга, что и придает этому
+                                    стейку главную изюминку.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalog-tile">
+                            <div class="catalog-tile-in" >
+                                <a href="#" class="img-cont">
+                                    <div class="img"
+                                         style="background-image: url(dist/img/content/thumb1.jpg)"></div>
+                                    <h5 class="prod-name">
+                                        Стейк Оссобуко выдержанный
+                                    </h5>
+                                </a>
+                                <div class="rank-review">
+                                    <div class="rank">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="reviews">
+                                        Отзывы: 5
+                                    </div>
+                                </div>
+                                <div class="product-price">
+                                    Цена: <span>65.00 грн/100г</span>
+                                </div>
+                                <button class="md-btn md-btn-raised md-btn-ripple">
+                                    Купить
+                                </button>
+                                <div class="text">
+                                    Стейк Оссобуко – это стейк толщиной 4-5 см из
+                                    верхней части голяшки (Shank), в середине
+                                    которого расположена полая кость с большим
+                                    количеством костного мозга, что и придает этому
+                                    стейку главную изюминку.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalog-tile">
+                            <div class="catalog-tile-in" >
+                                <a href="#" class="img-cont">
+                                    <div class="img"
+                                         style="background-image: url(dist/img/content/thumb1.jpg)"></div>
+                                    <h5 class="prod-name">
+                                        Стейк Оссобуко выдержанный
+                                    </h5>
+                                </a>
+                                <div class="rank-review">
+                                    <div class="rank">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="reviews">
+                                        Отзывы: 5
+                                    </div>
+                                </div>
+                                <div class="product-price">
+                                    Цена: <span>65.00 грн/100г</span>
+                                </div>
+                                <button class="md-btn md-btn-raised md-btn-ripple">
+                                    Купить
+                                </button>
+                                <div class="text">
+                                    Стейк Оссобуко – это стейк толщиной 4-5 см из
+                                    верхней части голяшки (Shank), в середине
+                                    которого расположена полая кость с большим
+                                    количеством костного мозга, что и придает этому
+                                    стейку главную изюминку.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalog-tile">
+                            <div class="catalog-tile-in" >
+                                <a href="#" class="img-cont">
+                                    <div class="img"
+                                         style="background-image: url(dist/img/content/thumb1.jpg)"></div>
+                                    <h5 class="prod-name">
+                                        Стейк Оссобуко выдержанный
+                                    </h5>
+                                </a>
+                                <div class="rank-review">
+                                    <div class="rank">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="reviews">
+                                        Отзывы: 5
+                                    </div>
+                                </div>
+                                <div class="product-price">
+                                    Цена: <span>65.00 грн/100г</span>
+                                </div>
+                                <button class="md-btn md-btn-raised md-btn-ripple">
+                                    Купить
+                                </button>
+                                <div class="text">
+                                    Стейк Оссобуко – это стейк толщиной 4-5 см из
+                                    верхней части голяшки (Shank), в середине
+                                    которого расположена полая кость с большим
+                                    количеством костного мозга, что и придает этому
+                                    стейку главную изюминку.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalog-tile">
+                            <div class="catalog-tile-in" >
+                                <a href="#" class="img-cont">
+                                    <div class="img"
+                                         style="background-image: url(dist/img/content/thumb1.jpg)"></div>
+                                    <h5 class="prod-name">
+                                        Стейк Оссобуко выдержанный
+                                    </h5>
+                                </a>
+                                <div class="rank-review">
+                                    <div class="rank">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="reviews">
+                                        Отзывы: 5
+                                    </div>
+                                </div>
+                                <div class="product-price">
+                                    Цена: <span>65.00 грн/100г</span>
+                                </div>
+                                <button class="md-btn md-btn-raised md-btn-ripple">
+                                    Купить
+                                </button>
+                                <div class="text">
+                                    Стейк Оссобуко – это стейк толщиной 4-5 см из
+                                    верхней части голяшки (Shank), в середине
+                                    которого расположена полая кость с большим
+                                    количеством костного мозга, что и придает этому
+                                    стейку главную изюминку.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalog-tile">
+                            <div class="catalog-tile-in" >
+                                <a href="#" class="img-cont">
+                                    <div class="img"
+                                         style="background-image: url(dist/img/content/thumb1.jpg)"></div>
+                                    <h5 class="prod-name">
+                                        Стейк Оссобуко выдержанный
+                                    </h5>
+                                </a>
+                                <div class="rank-review">
+                                    <div class="rank">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="reviews">
+                                        Отзывы: 5
+                                    </div>
+                                </div>
+                                <div class="product-price">
+                                    Цена: <span>65.00 грн/100г</span>
+                                </div>
+                                <button class="md-btn md-btn-raised md-btn-ripple">
+                                    Купить
+                                </button>
+                                <div class="text">
+                                    Стейк Оссобуко – это стейк толщиной 4-5 см из
+                                    верхней части голяшки (Shank), в середине
+                                    которого расположена полая кость с большим
+                                    количеством костного мозга, что и придает этому
+                                    стейку главную изюминку.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalog-tile">
+                            <div class="catalog-tile-in" >
+                                <a href="#" class="img-cont">
+                                    <div class="img"
+                                         style="background-image: url(dist/img/content/thumb1.jpg)"></div>
+                                    <h5 class="prod-name">
+                                        Стейк Оссобуко выдержанный
+                                    </h5>
+                                </a>
+                                <div class="rank-review">
+                                    <div class="rank">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="reviews">
+                                        Отзывы: 5
+                                    </div>
+                                </div>
+                                <div class="product-price">
+                                    Цена: <span>65.00 грн/100г</span>
+                                </div>
+                                <button class="md-btn md-btn-raised md-btn-ripple">
+                                    Купить
+                                </button>
+                                <div class="text">
+                                    Стейк Оссобуко – это стейк толщиной 4-5 см из
+                                    верхней части голяшки (Shank), в середине
+                                    которого расположена полая кость с большим
+                                    количеством костного мозга, что и придает этому
+                                    стейку главную изюминку.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="show-more-cont">
+                        <button class="show-more md-btn md-btn-raised md-btn-ripple">
+                            Показать еще 20 товаров
+                        </button>
 
+                            <ul class="pagination">
+                                <li>1</li>
+                                <li>
+                                    <a href="#">2</a>
+                                </li>
+                                <li>
+                                    <a href="#">3</a>
+                                </li>
+                                <li>
+                                    <a href="#">4</a>
+                                </li>
+                            </ul>
+
+                    </div>
+                </div>
+            </div>
+            <div class="articles-container">
+                <div class="container">
+                    
+                </div>
+            </div>
         </div>
     </main>
     <footer>

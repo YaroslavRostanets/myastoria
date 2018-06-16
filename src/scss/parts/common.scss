@@ -6,7 +6,8 @@ html, body {
   padding: 0;
 }
 body {
-  font-family: "Lato Regular";
+  font-family: "Helios";
+  color: #171717;
 }
 .lock {
   overflow: hidden;
@@ -17,4 +18,154 @@ a {
     overflow: hidden;
     text-decoration: none;
 }
+.baner {
+    position: relative;
+    img {
+        display: block;
+        width: 100%
+    }
+    .breadcrumbs {
+        list-style: none;
+        color: #FFFFFF;
+        font-size: 13px;
+        position: absolute;
+        padding-top: 32px;
+        padding-left: 35px;
+        display: flex;
+        a {
+            color: #cacaca;
+        }
+        li {
+            color: #FFFFFF;
+            &:after {
+                content: '\f105';
+                font-family: 'FontAwesome';
+                margin-left: 5px;
+                margin-right: 8px;
+            }
+            &:last-child {
+                &:after {
+                    display: none;
+                }
+            }
+        }
+    }
+    .page-title-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+        h1 {
+            color: #FFFFFF;
+            font-size: 40px;
+            margin: 0 0 20px 0;
+            text-transform: uppercase;
+            font-family: 'Helios Bold';
+        }
+        .after-title {
+            color: #FFFFFF;
+            font-size: 20px;
+            font-family: 'Helios';
+        }
+    }
+}
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+$md-btn-color: #EC1C29;
+
+.md-btn {
+  font-family: "Roboto medium", sans-serif;
+  font-size: 14px;
+  display: inline-block;
+  height: 36px;
+  min-width: 215px;
+  padding: 6px 16px;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border:0;
+  border-radius: 2px;
+  background: $md-btn-color;
+  color:#fff;
+  outline:0;
+}
+
+.md-btn-raised {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+              0 1px 5px 0 rgba(0, 0, 0, 0.12),
+              0 3px 1px -2px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:active {
+      box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14),
+                  0 3px 14px 2px rgba(0, 0, 0, 0.12),
+                  0 5px 5px -3px rgba(0, 0, 0, 0.4);
+  }
+}
+
+/*
+ Ripple
+*/
+.md-btn-ripple {
+  overflow: hidden;
+  position: relative;
+}
+
+.md-btn-ripple:after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 215px;
+  height: 120px;
+  margin-left: -108px;
+  margin-top: -60px;
+  background: rgba(255,255,255,0.3);
+  border-radius: 100%;
+  transform: scale(0);
+}
+
+@keyframes md-btn-ripple {
+  0% {
+    transform: scale(0);
+  }
+  20% {
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+
+.md-btn-ripple:not(:active):after {
+  animation: md-btn-ripple 0.9s ease-out;
+}
+
+.md-btn-ripple:after {
+  visibility: hidden;
+}
+
+.md-btn-ripple:focus:after {
+  visibility: visible;
+}
+
+
+// *************************************
+
+// *************************************
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
 

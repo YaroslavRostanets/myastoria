@@ -6,3 +6,11 @@
     font-family: 'Lato Regular';
     src: url('LatoRegular/LatoRegular.ttf');
 }
+@font-face {
+    font-family: 'Helios';
+    src: url('Helios/Helios.otf');
+}
+@font-face {
+    font-family: 'Helios Bold';
+    src: url('Helios/Helios-Bold.otf');
+}
