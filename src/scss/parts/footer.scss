@@ -1,0 +1,114 @@
+footer {
+
+    margin-top: -1px;
+    background: #FFFFFF;
+    position: relative;
+    .container {
+        padding: 64px 33px 0 33px;
+        box-shadow: 0 0 1px 0 rgba(0,0,0,.25);
+        height: 100%;
+        &:before {
+            content: "";
+            position: absolute;
+            width: calc( 100% - 2px );
+            height: 2px;
+            left: 1px;
+            top: -1px;
+            background: #FFFFFF;
+        }
+        .footer-in {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            border-top: 1px solid #DCDCDC;
+            padding-top: 35px;
+            padding-left: 110px;
+            padding-right: 110px;
+            padding-bottom: 40px;
+        }
+        .soc-part {
+           font-size: 16px;
+           color: #171717;
+        }
+        .foot-title {
+            margin-bottom: 10px;
+        }
+        .social {
+            display: flex;
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 38px;
+                height: 38px;
+                font-size: 23px;
+                margin-right: 11px;
+                color: #FFFFFF;
+                border-radius: 9px;
+                transition: all 0.2s ease-out;
+                &:last-child {
+                    margin-right: 0
+                }
+                &:hover {
+                    background: transparent;
+                }
+            }
+            .fb-ico {
+                background: #21599B;
+                border: 1px solid #21599B;
+                &:hover {
+                    color: #21599B;
+                }
+            }
+            .gplus-ico {
+                background: #F84734;
+                border: 1px solid #F84734;
+                &:hover {
+                    color: #F84734;
+                }
+            }
+            .in-ico {
+                background: #D48C6D;
+                border: 1px solid #D48C6D;
+                &:hover {
+                    color: #D48C6D;
+                }
+            }
+            .fs-ico {
+                background: #FE4374;
+                border: 1px solid #FE4374;
+                &:hover {
+                    color: #FE4374;
+                }
+            }
+        }
+        .center-part {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .logo {
+            width: 184px;
+            margin-bottom: 27px;
+            display: block;
+            img {
+                display: block;
+                width: 100%;
+            }
+        }
+        .copytirht {
+            color: #797979;
+            font-size: 16px;
+            text-align: center;
+        }
+        .right-part {
+            display: flex;
+            flex-direction: column;
+            a {
+                color: #171717;
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+}
