@@ -43,7 +43,7 @@
       padding-left: 50px;
     }
   }
-  .prod-name {
+  .product-name {
     color: #171717;
     font-size: 32px;
     font-family: 'Helios Bold';
@@ -310,6 +310,20 @@
     .add-review {
       width: calc( 100% - 760px );
     }
+    .js-more-review {
+      width: 274px;
+      font-size: 16px;
+      font-family: 'Helios Bold';
+      background: #171717;
+      height: 40px;
+      display: block;
+      margin: -40px auto 0 auto;
+      &:after {
+        width: 300px;
+        height: 120px;
+        margin-left: -150px;
+      }
+    }
   }
   .one-review {
     margin-bottom: 40px;
@@ -328,6 +342,24 @@
         margin-right: 1px;
         &:last-child {
           margin-right: 0;
+        }
+      }
+    }
+  }
+  .reviews-view {
+    &.hided {
+      .reviews-cont {
+        margin-bottom: -40px;
+        position: relative;
+        &:after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 45px;
+          background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,1));
+          z-index: 1;
         }
       }
     }
@@ -380,8 +412,13 @@
         display: flex;
         .fa {
           color: #D54168;
-          font-size: 17px;
+          font-size: 18px;
           margin-right: 1px;
+          &.selected {
+            &:before {
+              content: "\f005";
+            }
+          }
           &:last-child {
             margin-right: 0;
           }
@@ -402,4 +439,41 @@
       background: #C60035;
     }
   }
+  .tiles-wrap {
+    padding: 0;
+    margin: 0 -20px;
+    .prod-name {
+      height: 85px;
+    }
+  }
+  .reviews-wrap {
+    margin-bottom: 40px;
+  }
+  .recommendations {
+    padding-top: 30px;
+    h3 {
+      text-align: center;
+      margin: 0 0 30px 0;
+      color: #171717;
+      font-size: 32px;
+      font-family: 'Helios Bold';
+    }
+  }
+  .articles-cont {
+    margin-bottom: 70px;
+    h3 {
+      span {
+        color: #797979;
+        font-size: 16px;
+      }
+    }
+    .articles-wrap {
+      padding: 0;
+      margin: 0 -13px 40px -13px;
+    }
+  }
+  .feedback-cont {
+    padding: 0;
+  }
 }
+

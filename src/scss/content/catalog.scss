@@ -48,28 +48,11 @@
       }
     }
   }
-  .rank-review {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 70px;
-    &:before {
-      content: "";
-      width: 100px;
-    }
-  }
   .reviews {
     color: #797979;
     font-size: 16px;
     width: 100px;
     text-align: right;
-  }
-  .rank {
-    display: flex;
-    color: #EC1C29;
-    .fa {
-      font-size: 23px;
-    }
   }
   .show-more-cont {
     display: flex;
@@ -127,6 +110,23 @@
       transform: scale(1.1);
     }
   }
+  .rank-review {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    &:before {
+      content: "";
+      width: 100px;
+    }
+  }
+  .rank {
+    display: flex;
+    color: #EC1C29;
+    .fa {
+      font-size: 23px;
+    }
+  }
   .catalog-tile-in {
     transition: all 0.2s ease-out;
     padding: 20px;
@@ -156,6 +156,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
     background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.65));
   }
   .product-price {
@@ -183,59 +184,6 @@
   }
 }
 .catalog-main {
-  .articles-cont {
-    margin-bottom: 35px;
-    h3 {
-      margin: 0 0 35px 0;
-      font-size: 40px;
-      text-align: center;
-    }
-  }
-  .articles-wrap {
-    padding: 0 20px;
-    display: flex;
-    margin-bottom: 40px;
-  }
-  .one-article {
-    width: 33.333%;
-    margin: 0 13px;
-    display: block;
-    height: 310px;
-    position: relative;
-    .article-title {
-      padding: 0 10px 0 20px;
-      display: flex;
-      align-items: center;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      color: #FFFFFF;
-      font-size: 20px;
-      font-family: 'Helios Bold';
-      height: 75px;
-      background: linear-gradient(to bottom,rgba(0,0,0,0),rgba(0,0,0,.65));
-    }
-    img {
-      display: block;
-      width: auto;
-      height: 100%;
-    }
-  }
-  .more-articles-cont {
-    display: flex;
-    justify-content: center;
-  }
-  .more-articles {
-    background: #171717;
-    height: 40px;
-    color: #FFFFFF;
-    font-size: 16px;
-    font-family: 'Helios Bold';
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
   .seo-cont {
     margin-bottom: 65px;
     h3 {
@@ -291,86 +239,141 @@
       margin-top: 25px;
     }
   }
-  .feedback-cont {
+}
+
+.feedback-cont {
+  display: flex;
+  padding: 0 33px;
+  .img-part {
+    width: 540px;
+    background-size: cover;
+    background-position: center;
+  }
+  .form-part {
+    background: #F5F5F5;
+    flex-grow: 1;
+    padding-top: 55px;
+    padding-bottom: 40px;
+  }
+  .form-group {
+    margin-bottom: 25px;
+  }
+  h5 {
+    color: #171717;
+    font-size: 32px;
+    font-family: 'Helios Bold';
+    margin: 0 0 40px 0;
+    text-align: center;
+  }
+  .form-in {
+    width: 415px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  .label {
+    color: #171717;
+    font-size: 16px;
+    font-family: 'Helios Bold';
+    margin: 0 0 3px 0;
+    display: block;
+    text-align: left;
+  }
+  input[type='text'],
+  input[type='email'] {
+    display: block;
+    width: 100%;
+    height: 34px;
+    border: 1px solid #797979;
+  }
+  .checkbox-wrap {
     display: flex;
-    padding: 0 33px;
-    .img-part {
-      width: 540px;
-      background-size: cover;
-      background-position: center;
+    margin-top: 15px;
+  }
+  .checkbox-cont {
+    margin-right: 30px;
+    &:last-child {
+      margin-right: 0;
     }
-    .form-part {
-      background: #F5F5F5;
-      flex-grow: 1;
-      padding-top: 55px;
-      padding-bottom: 40px;
+  }
+  .jq-radio {
+    box-shadow: none;
+    vertical-align: -2px;
+    background: #FFFFFF;
+    border: 1px solid #7C7C7C;
+    &.checked {
+      border: 1px solid #EC1C29;
+      .jq-radio__div {
+        width: 8px;
+        height: 8px;
+        background: #EC1C29;
+        box-shadow: none;
+      }
     }
-    .form-group {
-      margin-bottom: 25px;
-    }
-    h5 {
-      color: #171717;
-      font-size: 32px;
-      font-family: 'Helios Bold';
-      margin: 0 0 40px 0;
-      text-align: center;
-    }
-    .form-in {
-      width: 415px;
-      margin-left: auto;
-      margin-right: auto;
-      text-align: center;
-    }
-    .label {
-      color: #171717;
-      font-size: 16px;
-      font-family: 'Helios Bold';
-      margin: 0 0 3px 0;
-      display: block;
-      text-align: left;
-    }
-    input[type='text'],
-    input[type='email'] {
-      display: block;
-      width: 100%;
-      height: 34px;
-      border: 1px solid #797979;
-    }
-    .checkbox-wrap {
+  }
+  textarea {
+    width: 100%;
+    resize: none;
+    height: 70px;
+    border: 1px solid #797979;
+  }
+  .md-btn {
+    height: 40px;
+    font-family: 'Helios Bold';
+    font-size: 16px;
+  }
+}
+
+.articles-cont {
+  margin-bottom: 35px;
+  h3 {
+    margin: 0 0 35px 0;
+    font-size: 40px;
+    text-align: center;
+  }
+  .articles-wrap {
+    padding: 0 20px;
+    display: flex;
+    margin-bottom: 40px;
+  }
+  .one-article {
+    width: 33.333%;
+    margin: 0 13px;
+    display: block;
+    height: 310px;
+    position: relative;
+    .article-title {
+      padding: 0 10px 0 20px;
       display: flex;
-      margin-top: 15px;
-    }
-    .checkbox-cont {
-      margin-right: 30px;
-      &:last-child {
-        margin-right: 0;
-      }
-    }
-    .jq-radio {
-      box-shadow: none;
-      vertical-align: -2px;
-      background: #FFFFFF;
-      border: 1px solid #7C7C7C;
-      &.checked {
-        border: 1px solid #EC1C29;
-        .jq-radio__div {
-          width: 8px;
-          height: 8px;
-          background: #EC1C29;
-          box-shadow: none;
-        }
-      }
-    }
-    textarea {
+      align-items: center;
+      position: absolute;
+      bottom: 0;
+      left: 0;
       width: 100%;
-      resize: none;
-      height: 70px;
-      border: 1px solid #797979;
-    }
-    .md-btn {
-      height: 40px;
+      color: #FFFFFF;
+      font-size: 20px;
       font-family: 'Helios Bold';
-      font-size: 16px;
+      height: 75px;
+      background: linear-gradient(to bottom,rgba(0,0,0,0),rgba(0,0,0,.65));
     }
+    img {
+      display: block;
+      width: auto;
+      height: 100%;
+    }
+  }
+  .more-articles-cont {
+    display: flex;
+    justify-content: center;
+  }
+  .more-articles {
+    background: #171717;
+    height: 40px;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-family: 'Helios Bold';
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }

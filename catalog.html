@@ -19,52 +19,215 @@
 </head>
 <body>
     <header>
-            <div class="container">
-                <div class="top-part">
-                    <a href="" class="phone">
-                        (067) 808-45-21
+    <div class="container">
+        <div class="top-part">
+            <a href="tel:+380678084521" class="phone">
+                (067) 808-45-21
+            </a>
+            <a href="" class="logo">
+                <img src="dist/img/logo.png" alt="">
+            </a>
+            <div class="controlls">
+                <div href="javascript:void(0);" class="search ">
+                    <a href="javascript:void(0);" class="js-open-search">
+                        <img src="dist/img/seach.png" alt="">
                     </a>
-                    <a href="" class="logo">
-                        <img src="dist/img/logo.png" alt="">
-                    </a>
-                    <div class="controlls">
-                        <a href="javascript:void(0);" class="search">
-                            <img src="dist/img/seach.png" alt="">
-                        </a>
-                        <a class="cart">
-                            <img src="dist/img/card.png" alt="">
-                            <span class="total">2</span>
-                        </a>
-                        <a href="" class="sign-in">Войти</a>
-                    </div>
+                    <form action="" class="search-form">
+                        <div class="search-input-wrap">
+                            <input type="text" class="js-search-input" placeholder="Введите слова для поиска...">
+                            <script>
+                                $(document).ready(function(){
+                                    $('.js-search-input').keyup(function(){
+                                        if($(this).val().length > 2){
+                                            $('.search-result').fadeIn(100);
+                                        } else {
+                                            $('.search-result').fadeOut(100);
+                                        }
+                                    });
+                                });
+                            </script>
+                            <div class="search-result">
+                                <a href="#" class="one-result">
+                                    <div class="cart-img">
+                                        <img src="dist/img/content/article2.jpg" alt="">
+                                    </div>
+                                    <div class="cart-text">
+                                        Стейк Рибай PRIME
+                                    </div>
+                                </a>
+                                <a href="#" class="one-result">
+                                    <div class="cart-img">
+                                        <img src="dist/img/content/article1.jpeg" alt="">
+                                    </div>
+                                    <div class="cart-text">
+                                        Стейк Рибай PRIME
+                                    </div>
+                                </a>
+                                <a href="#" class="one-result">
+                                    <div class="cart-img">
+                                        <img src="dist/img/content/article3.jpg" alt="">
+                                    </div>
+                                    <div class="cart-text">
+                                        Стейк Рибай PRIME
+                                    </div>
+                                </a>
+                                <a href="#" class="one-result">
+                                    <div class="cart-img">
+                                        <img src="dist/img/content/thumb1.jpg" alt="">
+                                    </div>
+                                    <div class="cart-text">
+                                        Стейк Рибай PRIME
+                                    </div>
+                                </a>
+                                <a href="#" class="one-result">
+                                    <div class="cart-img">
+                                        <img src="dist/img/content/thumb2.jpg" alt="">
+                                    </div>
+                                    <div class="cart-text">
+                                        Стейк Рибай PRIME
+                                    </div>
+                                </a>
+                                <a href="#" class="one-result">
+                                    <div class="cart-img">
+                                        <img src="dist/img/content/thumb3.JPG" alt="">
+                                    </div>
+                                    <div class="cart-text">
+                                        Стейк Рибай PRIME
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <button style="display: none;"></button>
+                    </form>
                 </div>
-                <div class="bot-part">
-                    <ul class="nav">
+                <a class="cart">
+                    <img src="dist/img/card.png" alt="">
+                    <span class="total">2</span>
+                </a>
+                <a href="" class="sign-in">Войти</a>
+            </div>
+        </div>
+        <ul class="bot-part">
+            <ul class="nav js-site-menu">
+                <li>
+                    <a href="#">Сырая продукция</a>
+                    <ul class="menu-dropdown">
                         <li>
-                            <a href="#">Сырая продукция</a>
+                            <a href="#">Стейки</a>
+                            <ul class="menu-dropdown-in">
+                                <li>
+                                    <a href="#">Стейк Портерхаус</a>
+                                </li>
+                                <li>
+                                    <a href="#">Стейк Нью Йорк</a>
+                                </li>
+                                <li>
+                                    <a href="#">Стейк Рыбай</a>
+                                </li>
+                                <li>
+                                    <a href="#">Стейк Стриплойн</a>
+                                </li>
+                                <li>
+                                    <a href="#">Стейк Тибоун</a>
+                                </li>
+                                <li>
+                                    <a href="#">Филе Миньон</a>
+                                </li>
+                                <li>
+                                    <a href="#">Стейк Клаб</a>
+                                </li>
+                                <li>
+                                    <a href="#">Стейк Особуко</a>
+                                </li>
+                                <li>
+                                    <a href="#">Стейк Раунд</a>
+                                </li>
+                                <li>
+                                    <a href="#">Стейк Томагавк</a>
+                                </li>
+                                <li>
+                                    <a href="#">Стейк Чак Ролл</a>
+                                </li>
+                                <li>
+                                    <a href="#">Стейк Шатобриан</a>
+                                </li>
+                                <li>
+                                    <a href="#">Стейк Ковбой</a>
+                                </li>
+                                <li>
+                                    <a href="#">Стейк Особуко</a>
+                                </li>
+                                <li>
+                                    <a href="#">Стейк Тибоун</a>
+                                </li>
+                                <li>
+                                    <a href="#">Альтернативные стейки</a>
+                                </li>
+                            </ul>
                         </li>
                         <li>
-                            <a href="#">Готовая продукция</a>
+                            <a href="#">Говядина</a>
                         </li>
                         <li>
-                            <a href="#">Акции</a>
+                            <a href="#">Говядина Абердин</a>
                         </li>
                         <li>
-                            <a href="#">Доставка и оплата</a>
+                            <a href="#">Телятина</a>
                         </li>
                         <li>
-                            <a href="#">Полезно о мясе</a>
+                            <a href="#">Свинина</a>
                         </li>
                         <li>
-                            <a href="#">О нас</a>
+                            <a href="#">Курдючная баранина</a>
                         </li>
                         <li>
-                            <a href="#">Контакты</a>
+                            <a href="#">Крольчатина</a>
+                        </li>
+                        <li>
+                            <a href="#">Шашлыки</a>
+                        </li>
+                        <li>
+                            <a href="#">Сало</a>
+                        </li>
+                        <li>
+                            <a href="#">Птица</a>
+                        </li>
+                        <li>
+                            <a href="#">Полуфабрикаты</a>
+                        </li>
+                        <li>
+                            <a href="#">Пельмени и вареники</a>
+                        </li>
+                        <li>
+                            <a href="#">Овощи и зелень</a>
+                        </li>
+                        <li>
+                            <a href="#">Фрукты</a>
                         </li>
                     </ul>
-                </div>
-            </div>
-        </header>
+                </li>
+                <li>
+                    <a href="#">Готовая продукция</a>
+                </li>
+                <li>
+                    <a href="#">Акции</a>
+                </li>
+                <li>
+                    <a href="#">Доставка и оплата</a>
+                </li>
+                <li>
+                    <a href="#">Полезно о мясе</a>
+                </li>
+                <li>
+                    <a href="#">О нас</a>
+                </li>
+                <li>
+                    <a href="#">Контакты</a>
+                </li>
+            </ul>
+    </div>
+    </div>
+</header>
     <main>
         <div class="catalog-main">
             <div class="baner">
