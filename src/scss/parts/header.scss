@@ -35,6 +35,7 @@ header {
   }
   .bot-part {
     padding: 0 45px 0 55px;
+    margin: 16px 0;
   }
   .nav {
     list-style: none;
@@ -244,5 +245,154 @@ header {
   }
   .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
     background-color: rgba(220,220,220,1) !important;
+  }
+  .mobile-header {
+    height: 55px;
+    padding: 0 15px;
+    background: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    .mobile-logo {
+      width: 160px;
+      img {
+        width: 100%;
+        display: block;
+      }
+    }
+    .cart-call {
+      display: flex;
+    }
+    .menu-btn {
+      display: flex;
+      align-items: center;
+      font-size: 26px;
+      padding: 10px 15px;
+      width: 53px;
+    }
+    .call {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      font-size: 26px;
+      padding: 10px;
+      width: 50px;
+      .fa {
+        margin-top: 4px;
+      }
+    }
+    .basket {
+      display: flex;
+      align-items: center;
+      font-size: 26px;
+      padding: 10px;
+      width: 50px;
+    }
+    a {
+      display: block;
+      color: #333333;
+    }
+  }
+  .mobile-menu {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background: #F2F2F2;
+    width: 285px;
+    z-index: 99;
+    display: none;
+    .search-wrap {
+      padding-right: 10px;
+      padding-left: 20px;
+      padding-top: 8px;
+      input[type="text"] {
+        background: transparent;
+        height: 21px;
+        border: none;
+        flex-grow: 1;
+        padding-left: 3px;
+        outline: none;
+        &::placeholder {
+          font-size: 13px;
+          font-style: italic;
+          color: #B5B5B5;
+        }
+      }
+      form {
+        display: flex;
+        border-bottom: 2px dashed #989898;
+      }
+      button {
+        border: none;
+        background: transparent;
+        font-size: 12px;
+        text-transform: uppercase;
+        color: #000000;
+        padding: 0;
+        font-family: 'Helios Bold';
+      }
+    }
+    .menu-mobile-in {
+      padding: 17px 0 17px 0;
+      margin: 0;
+      li {
+        display: block;
+        height: 41px;
+        a {
+          display: flex;
+          align-items: center;
+          width: 100%;
+          height: 100%;
+          padding-left: 20px;
+          font-size: 12px;
+          font-family: 'Helios Bold';
+          text-transform: uppercase;
+        }
+      }
+    }
+    .mob-basket-link {
+      display: flex;
+      align-items: center;
+      font-size: 12px;
+      font-family: 'Helios Bold';
+      text-transform: uppercase;
+      height: 41px;
+      padding-left: 20px;
+      .fa {
+        font-size: 30px;
+        margin-right: 7px;
+        width: 30px;
+        height: 30px;
+      }
+    }
+    .sign-in {
+      height: 41px;
+      padding-left: 20px;
+      display: flex;
+      align-items: center;
+      font-size: 13px;
+      font-family: 'Helios Bold';
+      .fa {
+        display: flex;
+        justify-content: center;
+        width: 30px;
+        height: 30px;
+        font-size: 31px;
+        margin-right: 7px;
+      }
+    }
+    .bot-mobile-menu {
+      padding: 20px 0;
+      position: relative;
+      &:before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: calc( 100% - 30px );
+        top: 0;
+        left: 20px;
+        height: 1px;
+        background: #B8B8B8;
+      }
+    }
   }
 }

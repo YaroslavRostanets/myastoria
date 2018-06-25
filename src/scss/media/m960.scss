@@ -1,0 +1,46 @@
+@media (max-width: 960px) {
+  header {
+    .top-part {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    .bot-part {
+      padding: 0 20px;
+    }
+    .nav>li>a {
+      text-align: center;
+    }
+  }
+  .baner {
+    .page-title-container {
+      h1 {
+        font-size: 25px;
+        margin: 0 0 5px;
+      }
+      .after-title {
+        font-size: 18px;
+      }
+    }
+  }
+  .tiles-wrap {
+    max-width: 750px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .catalog-tile {
+    width: 50%;
+    height: auto;
+    .md-btn {
+      opacity: 1;
+    }
+    .text {
+      display: none;
+    }
+  }
+  .feedback-cont {
+    .img-part {
+      display: none;
+    }
+  }
+}

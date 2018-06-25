@@ -65,6 +65,15 @@
       display: block;
       margin: 0 auto 24px auto;
       height: 64px;
+      &:not(:active):after {
+        animation: md-btn-ripple 1.9s ease-out;
+      }
+      &:after {
+        width: 340px;
+        height: 200px;
+        margin-left: -170px;
+        margin-top: -100px;
+      }
     }
     .pagination {
       list-style: none;
@@ -107,7 +116,7 @@
       opacity: 1;
     }
     .img {
-      transform: scale(1.1);
+      transform: scale(1.05);
     }
   }
   .rank-review {
@@ -184,6 +193,9 @@
   }
 }
 .catalog-main {
+  .articles-cont {
+    margin-top: 45px;
+  }
   .seo-cont {
     margin-bottom: 65px;
     h3 {
@@ -285,6 +297,7 @@
     width: 100%;
     height: 34px;
     border: 1px solid #797979;
+    padding-left: 8px;
   }
   .checkbox-wrap {
     display: flex;
@@ -316,6 +329,7 @@
     resize: none;
     height: 70px;
     border: 1px solid #797979;
+    padding: 5px;
   }
   .md-btn {
     height: 40px;
@@ -358,6 +372,10 @@
     }
     img {
       display: block;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%,0);
       width: auto;
       height: 100%;
     }
