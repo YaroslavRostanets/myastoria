@@ -5,11 +5,18 @@
   .sort {
     padding: 30px 38px 10px 38px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     color: #171717;
     font-size: 16px;
     font-family: 'Helios Bold';
+    .one-sort {
+      display: flex;
+    }
+    .label {
+      display: flex;
+      align-items: center;
+    }
     select {
       display: none;
     }

@@ -104,8 +104,46 @@
   .roasting {
     margin-bottom: 35px;
   }
+  .mobile-price {
+    display: none;
+    font-size: 17px;
+    font-family: 'Helios Bold';
+    color: #3A3A3A;
+    text-align: center;
+  }
+  .mobile-char {
+    display: none;
+    margin-bottom: 10px;
+    table {
+      width: 100%;
+      font-size: 12px;
+      td {
+        padding: 7px 4px;
+        &:first-child {
+          color: #9C9C9C;
+        }
+      }
+    }
+  }
+  .mobile-sum {
+    display: none;
+    color: #151515;
+    font-size: 14px;
+    font-family: 'Helios Bold';
+    span {
+      margin-left: 8px;
+      font-size: 15px;
+    }
+  }
+  .count-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px 0 15px;
+  }
   .count-price {
     display: flex;
+
   }
   .jq-number {
     display: flex;
@@ -264,6 +302,9 @@
       }
     }
   }
+  .mobile-title {
+    display: none;
+  }
   .descr-roast {
     display: flex;
     .description {
@@ -300,6 +341,12 @@
       span {
         color: #797979;
       }
+    }
+    .mobile-add-review {
+      display: none;
+      color: #3165CC;
+      text-decoration: underline;
+      text-transform: none;
     }
     .reviews-flex {
       display: flex;

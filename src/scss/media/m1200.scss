@@ -1,3 +1,27 @@
+@media (max-width: 1360px) {
+  .product-main {
+    .count-wrap {
+      padding-right: 15px;
+    }
+    .prod-top {
+      .info-cont {
+        padding-left: 35px;
+      }
+    }
+    .price {
+      font-size: 28px;
+      margin-bottom: 25px;
+    }
+    .price-wrap {
+      .md-btn {
+        width: 170px;
+        min-width: 170px;
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
 @media (max-width: 1200px) {
   header {
     .nav>li>a {
@@ -100,6 +124,29 @@
       }
     }
   }
+  .product-main {
+    .product-name {
+      font-size: 29px;
+      margin-bottom: 15px;
+    }
+    .reviews-rank {
+      margin-bottom: 25px;
+    }
+    .roasting-select {
+      a {
+        margin-right: 15px;
+      }
+    }
+    .reviews-wrap {
+      .reviews-view {
+        width: 680px;
+      }
+      .add-review {
+        width: calc(100% - 680px);
+      }
+    }
+  }
+
 }
 
 @media (max-width: 1100px) {
