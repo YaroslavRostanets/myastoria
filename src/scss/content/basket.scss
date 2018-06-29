@@ -25,6 +25,17 @@
     padding-top: 40px;
     padding-bottom: 30px;
     border-bottom: 1px solid #DBDBDB;
+    position: relative;
+    .remove-btn {
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      right: 0;
+      top: 45px;
+      background-image: url('../img/close.svg');
+      background-position: center;
+      background-size: contain;
+    }
     .prod-info {
       width: calc( 100% - 310px );
     }
@@ -44,6 +55,7 @@
       color: #161616;
       margin-bottom: 30px;
       display: block;
+      padding-right: 30px;
     }
     .price {
       font-size: 18px;
@@ -154,5 +166,52 @@
       font-family: 'Helios Bold';
       margin-left: 55px;
     }
+  }
+  .total {
+    text-align: right;
+    padding-top: 25px;
+    font-size: 16px;
+    color: #727272;
+    margin-bottom: 40px;
+    span {
+      font-size: 16px;
+      font-family: 'Helios Bold';
+      color: #010101;
+    }
+  }
+  .basket-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 15px;
+    .clear-basket {
+      background: #FFFFFF;
+      color: #727272;
+      box-shadow: none;
+      width: auto;
+      min-width: 0;
+      padding: 15px 0 0 0;
+      margin-right: 35px;
+    }
+    .to-order {
+      background: #C60035;
+      font-family: 'Helios Bold';
+      max-width: 215px;
+    }
+    .back-to-catalog {
+      color: #727272;
+      .fa {
+        position: relative;
+        top: 2px;
+        color: #787878;
+        margin-right: 2px;
+      }
+      span {
+        text-decoration: underline;
+      }
+    }
+  }
+  .mobile-basket-wrap {
+    display: none;
   }
 }

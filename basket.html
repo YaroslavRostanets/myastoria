@@ -607,15 +607,21 @@
         <div class="container">
             <div class="container-in">
                 <h2>Корзина</h2>
+                <div class="mobile-basket-wrap">
+                    <a href="javascript:void(0);" class="mobile-clear-basket">
+                        Очистить корзину
+                    </a>
+                </div>
                 <div class="after-count">
                     В Вашей корзине 2 товара
                 </div>
                 <div class="basket-contain">
                     <div class="one-product">
-                        <div class="prod-img">
+                        <a href="#" class="prod-img">
                             <img src="dist/img/content/thumb1.jpg" alt="">
-                        </div>
+                        </a>
                         <div class="prod-info">
+                            <a href="javascript:void(0);" class="remove-btn"></a>
                             <a href="#" class="prod-name">Стейк Рибай выдержанный</a>
                             <div class="price">Цена: 65 грн/100г</div>
                             <div class="bot">
@@ -634,10 +640,11 @@
                         </div>
                     </div>
                     <div class="one-product">
-                        <div class="prod-img">
+                        <a href="#" class="prod-img">
                             <img src="dist/img/content/thumb1.jpg" alt="">
-                        </div>
+                        </a>
                         <div class="prod-info">
+                            <a href="javascript:void(0);" class="remove-btn"></a>
                             <a href="#" class="prod-name">Стейк Рибай выдержанный</a>
                             <div class="price">Цена: 65 грн/100г</div>
                             <div class="bot">
@@ -660,10 +667,13 @@
                     Всего: <span>500 грн</span>
                 </div>
                 <div class="basket-controls">
-                    <a href="#" class="back-to-catalog">Продолжить покупки</a>
+                    <a href="#" class="back-to-catalog">
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                        <span>Продолжить покупки</span>
+                    </a>
                     <div class="controls-wrap">
-                        <a href="" class="md-btn md-btn-raised md-btn-ripple">Очистить корзину</a>
-                        <a href="" class="md-btn md-btn-raised md-btn-ripple">Оформить заказ</a>
+                        <a href="#" class="md-btn md-btn-raised md-btn-ripple clear-basket">Очистить корзину</a>
+                        <a href="#" class="md-btn md-btn-raised md-btn-ripple to-order">Оформить заказ</a>
                     </div>
                 </div>
             </div>

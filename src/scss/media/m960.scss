@@ -140,4 +140,27 @@
       }
     }
   }
+  .basket-main {
+    .container-in {
+      width: 735px;
+    }
+    .one-product {
+      .prod-name {
+        font-size: 19px;
+        margin-bottom: 15px;
+      }
+      .bot {
+        flex-direction: column;
+      }
+      .price {
+        margin-bottom: 20px;
+      }
+      .rape {
+        margin-bottom: 10px;
+      }
+      .count-price {
+        justify-content: space-between;
+      }
+    }
+  }
 }

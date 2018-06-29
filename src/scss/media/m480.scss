@@ -352,4 +352,37 @@
       }
     }
   }
+  .basket-main {
+    .container-in {
+      width: 300px;
+    }
+    .one-product {
+      .prod-info {
+        width: calc(100% - 95px);
+      }
+      .prod-name {
+        font-size: 13px;
+        margin-bottom: 0;
+        height: 30px;
+      }
+      .rape {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 8px;
+        .label {
+          font-size: 13px;
+          margin-right: 0;
+          margin-bottom: 4px;
+        }
+      }
+      .sum {
+        margin-left: 0;
+      }
+    }
+    .basket-controls {
+      .back-to-catalog {
+        text-align: center;
+      }
+    }
+  }
 }
