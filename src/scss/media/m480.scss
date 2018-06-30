@@ -389,5 +389,35 @@
     .container-in {
       width: 300px;
     }
+    .catalog-tile {
+      .catalog-tile-in {
+        &:hover {
+          box-shadow: none;
+          background: transparent;
+        }
+        .img-cont {
+          height: 200px;
+          .img {
+            transform: scale(1.0);
+          }
+        }
+      }
+      .prod-name {
+        height: 50px;
+        font-size: 16px;
+      }
+      .rank-review {
+        height: 40px;
+      }
+      .rank {
+        .fa {
+          font-size: 16px;
+          color: #FF0000;
+        }
+      }
+      .reviews {
+        color: #949494;
+      }
+    }
   }
 }

@@ -162,7 +162,8 @@ $(document).ready(function(){
 
     (function($){
         $(window).on("load",function(){
-            $('.search-result').mCustomScrollbar();
+            $('.search-result, .js-checkout-list').mCustomScrollbar();
+
         });
     })(jQuery);
 
@@ -252,6 +253,40 @@ $(document).ready(function(){
     $('.mobile-add-review').on('click', function(){
        $(this).hide();
        $('.add-review').fadeIn(100);
+    });
+
+    $('.js-delivery').change(function () {
+        if( $(this).val() == 'COURIER' ){
+            $('.delivery-type').hide();
+            $('.courier-cont').show();
+        } else if ( $(this).val() == 'PICKUP' ) {
+            $('.delivery-type').hide();
+            $('.pickup-cont').show();
+        } else if ( $(this).val() == 'IN_UKRAINE' ) {
+            $('.delivery-type').hide();
+            $('.in-ukraine-cont').show();
+        }
+    });
+    $('.js-delivery').change();
+
+    $('.js-add-comment').on('click', function(){
+        var variant = $(this).attr('data-variant');
+
+        if ( $(this).hasClass('opened') ) {
+            $(this).removeClass('opened');
+            $(this).attr('data-variant', $(this).text() );
+            $(this).text( variant );
+            $(this).closest('.comment-wrap').find('.comment-text').fadeOut();
+        } else {
+            $(this).addClass('opened');
+            $(this).attr('data-variant', $(this).text() );
+            $(this).text( variant );
+            $(this).closest('.comment-wrap').find('.comment-text').fadeIn();
+        }
+    });
+
+    $('.js-add-promo').on('click', function(){
+        $(this).closest('.promo-wrap').find('.add-promo-wrap').fadeIn();
     });
 
 });

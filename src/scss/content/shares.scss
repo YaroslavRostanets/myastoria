@@ -109,4 +109,30 @@
     height: 42px;
     font-size: 17px;
   }
+  .tiles-wrap {
+    margin: 0 -20px;
+    padding: 0;
+  }
+  .share-price {
+    text-align: center;
+    color: #949494;
+    font-size: 20px;
+    min-height: 30px;
+    b {
+      font-family: 'Helios Bold';
+    }
+  }
+  .catalog-tile {
+    .rank-review {
+      height: 50px;
+    }
+    .product-price {
+      font-size: 22px;
+    }
+  }
+}
+.one-share-main {
+  .one-share {
+    margin-bottom: 20px;
+  }
 }

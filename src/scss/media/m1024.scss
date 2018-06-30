@@ -157,5 +157,17 @@
       }
     }
   }
+  .shares-main {
+    .share-price {
+      font-size: 18px;
+      min-height: 28px;
+    }
+    .catalog-tile {
+      height: 395px;
+      .product-price {
+        font-size: 20px;
+      }
+    }
+  }
 }
 

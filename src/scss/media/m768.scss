@@ -577,12 +577,28 @@
     }
     .container-in {
       width: 540px;
+      overflow: hidden;
     }
     .share-name-wrap {
       padding-left: 20px;
     }
     .share-name {
       font-size: 20px;
+    }
+    .rank {
+      .fa {
+        font-size: 18px;
+      }
+    }
+    .reviews {
+      font-size: 13px;
+      color: #949494;
+    }
+    .share-price {
+      font-size: 16px;
+    }
+    .product-price {
+      font-size: 19px;
     }
   }
 }
