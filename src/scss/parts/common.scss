@@ -182,3 +182,18 @@ main {
     top: 0;
     left: 0;
 }
+.pagination {
+    list-style: none;
+    font-size: 28px;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    li {
+      color: #171717;
+      margin: 0 3px;
+    }
+    a {
+      color: #797979;
+    }
+}

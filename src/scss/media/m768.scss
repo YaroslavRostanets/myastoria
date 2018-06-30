@@ -567,6 +567,24 @@
       }
     }
   }
+  .shares-main {
+    background: #F2F2F2;
+    .container {
+      padding-bottom: 40px;
+    }
+    h1 {
+      font-size: 25px;
+    }
+    .container-in {
+      width: 540px;
+    }
+    .share-name-wrap {
+      padding-left: 20px;
+    }
+    .share-name {
+      font-size: 20px;
+    }
+  }
 }
 @media (max-width: 600px) {
   header {
@@ -592,6 +610,58 @@
       .remove-btn {
         top: 0;
       }
+    }
+  }
+  .shares-main {
+    h1 {
+      font-size: 15px;
+      text-transform: uppercase;
+      color: #515151;
+    }
+    .container {
+      padding-top: 15px;
+    }
+    .container-in {
+      width: 380px;
+    }
+    .one-share {
+      margin-bottom: 20px;
+      .share-img {
+        margin-bottom: 8px;
+      }
+      .timer-title {
+        min-width: 100px;
+        font-size: 10px;
+      }
+      .timer {
+        min-width: 110px;
+      }
+    }
+    .countDays, .countHours, .countMinutes, .countSeconds {
+      font-size: 14px;
+    }
+    .countDiv {
+      width: 9px;
+    }
+    .share-name-wrap {
+      padding-left: 8px;
+    }
+    .share-name {
+      font-size: 16px;
+      color: #0066CC;
+    }
+    .one-val {
+      font-size: 7px;
+    }
+    .more-shares {
+      height: 30px;
+      border-radius: 4px;
+      font-family: 'Helios';
+      font-size: 15px;
+      padding: 0px 10px;
+    }
+    .pagination {
+      font-size: 20px;
     }
   }
 }
