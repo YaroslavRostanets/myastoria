@@ -181,4 +181,53 @@
       height: auto;
     }
   }
+  .checkout-main {
+    h1 {
+      margin: 0 0 25px;
+      font-size: 28px;
+    }
+    .container-in {
+      width: 720px;
+    }
+    .checkout-form-wrap {
+      width: 510px;
+      margin: 0 auto;
+      .jq-selectbox__select {
+        width: 355px;
+      }
+      .delivery {
+        width: auto;
+        margin-left: 150px;
+      }
+      .delivery-type {
+        label {
+          width: 150px;
+        }
+        input[type=text] {
+          width: 355px;
+        }
+      }
+      .payment-method {
+        .jq-selectbox__select {
+          width: 355px;
+        }
+      }
+    }
+    .checkout-wrap {
+      flex-direction: column;
+      label {
+        width: 150px;
+      }
+      input[type=text], input[type=email] {
+        width: 355px;
+      }
+    }
+    .comment-wrap {
+      width: 505px;
+    }
+    .checkout-cont {
+      width: 510px;
+      margin: 0 auto 20px auto;
+    }
+  }
 }

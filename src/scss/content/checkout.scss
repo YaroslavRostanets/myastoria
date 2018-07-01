@@ -114,6 +114,16 @@
     }
   }
   .checkout-form-wrap {
+    .pickup-cont {
+      .delivery {
+        margin-bottom: 25px;
+      }
+    }
+    .in-ukraine-cont {
+      .delivery {
+        margin-bottom: 25px;
+      }
+    }
     input[type="text"], input[type="email"]{
       width: 355px;
       height: 35px;
@@ -136,6 +146,22 @@
       font-family: 'Helios Bold';
       display: flex;
       align-items: center;
+    }
+    .delivery-type {
+      label {
+        width: 145px;
+      }
+      input[type="text"] {
+        width: 315px;
+      }
+      .np-depart {
+        label {
+          width: 220px;
+        }
+        input[type="text"]{
+          width: 240px;
+        }
+      }
     }
     .flex {
       width: 100%;
@@ -186,6 +212,7 @@
     .date-selector {
       display: flex;
       align-items: center;
+      margin-bottom: 30px;
       .label {
         font-family: 'Helios Bold';
         margin-right: 35px;
@@ -193,6 +220,15 @@
       .js-calendar {
         color: #797979;
         margin-right: 30px;
+        position: relative;
+        input[type=text] {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          opacity: 0;
+        }
         span {
           text-decoration: underline;
         }
@@ -212,7 +248,66 @@
         width: 290px;
       }
     }
+    .payment-method {
+      label {
+        width: 145px;
+      }
+      .jq-selectbox__select {
+        width: 315px;
+      }
+    }
+    .count-persons {
+      label {
+        width: 185px;
+      }
+      .jq-number {
+        padding: 0;
+      }
+      .jq-number__field {
+        width: 275px;
+        border-radius: 0;
+        border: 1px solid #797979;
+        box-shadow: none;
+        padding-left: 40px;
+        padding-right: 40px;
+        input {
+          text-align: center;
+        }
+      }
+      .jq-number__spin {
+        box-shadow: none;
+        background: none;
+        border-radius: 0;
+        border: none;
+        width: 45px;
+        &.plus {
+          height: 100%;
+          right: auto;
+          left: 0;
+          &:after {
+            content: "+";
+          }
+        }
+        &.minus {
+          height: 100%;
+          right: 0;
+          &:after {
+            content: "-";
+          }
+        }
+        &:after {
+          border: none;
+          height: auto;
+          width: auto;
+          top: 43%;
+          left: 50%;
+          transform: translate(-50%,-50%);
+          margin-bottom: 2px;
+        }
+      }
+    }
   }
+
   .mCSB_scrollTools .mCSB_draggerRail {
     width: 10px;
     background: #F2F2F2;
@@ -253,7 +348,7 @@
     width: 220px;
     display: none;
     input[type="text"]{
-      width: 100%;
+      width: 100% !important;
       padding-right: 50px;
     }
     .send-promo {
@@ -270,5 +365,19 @@
         font-size: 24px;
       }
     }
+  }
+  .mobile-title {
+    display: none;
+  }
+  .md-btn {
+    background: #C60035;
+    font-family: 'Helios Bold';
+  }
+  .mobile-title-edit {
+    display: none;
+  }
+  .checkout-submit {
+    display: flex;
+    justify-content: center;
   }
 }

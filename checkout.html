@@ -608,111 +608,153 @@
         <div class="container">
             <div class="container-in">
                 <h1>Оформление заказа</h1>
-                <div class="checkout-wrap">
-                    <div class="checkout-form-wrap">
-                        <form action="">
-                            <div class="form-group">
-                                <label>ФИО</label>
-                                <input type="text" value="Василий Петров">
-                            </div>
-                            <div class="form-group">
-                                <div class="flex">
-                                    <label>Телефон</label>
-                                    <input type="text">
+                <form action="">
+                    <div class="checkout-wrap">
+                        <div class="checkout-form-wrap">
+
+                            <div class="group-area">
+                                <h4 class="mobile-title">
+                                    Информация о покупателе
+                                </h4>
+                                <div class="form-group">
+                                    <label>ФИО</label>
+                                    <input type="text" placeholder="ФИО" value="Василий Петров">
                                 </div>
-                                <div class="not-callback">
-                                    <label>
-                                        <input data-styler type="checkbox">
-                                        Не перезванивать
-                                    </label>
+                                <div class="form-group">
+                                    <div class="flex">
+                                        <label>Телефон</label>
+                                        <input type="text" placeholder="Телефон" class="js-mask">
+                                    </div>
+                                    <div class="not-callback">
+                                        <label>
+                                            <input data-styler type="checkbox">
+                                            Не перезванивать
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group email-group">
+                                    <label>Email</label>
+                                    <input type="email" placeholder="E-Mail">
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <label>Email</label>
-                                <input type="email">
-                            </div>
-                            <div class="form-group delivery-select-wrap">
-                                <div class="flex">
-                                    <label>Доставка</label>
-                                    <select data-styler class="js-delivery">
-                                        <option value="COURIER">Курьером</option>
-                                        <option value="PICKUP">Самовывоз</option>
-                                        <option value="IN_UKRAINE">Самовывоз</option>
-                                    </select>
+
+                            <div class="group-area">
+                                <h4 class="mobile-title">
+                                    Доставка
+                                </h4>
+                                <div class="form-group delivery-select-wrap">
+                                    <div class="flex">
+                                        <label>Доставка</label>
+                                        <select data-styler class="js-delivery">
+                                            <option value="COURIER">Курьером</option>
+                                            <option value="PICKUP">Самовывоз</option>
+                                            <option value="IN_UKRAINE">Доставка по Украине</option>
+                                        </select>
+                                    </div>
+                                    <div class="courier-cont delivery-type">
+                                        <div class="delivery">
+                                            <p>Стоимость: <span>70 грн.</span></p>
+                                            <p>Осуществляется за 3 часа, при заказе <span> c 10:00 до 20:00</span></p>
+                                            <p>После 20:00 доставка на следующий день</p>
+                                            <p>Срок доставки: <span>от 1 до 3 часов</span></p>
+                                            <p>Бесплатная доставка: <span>от 700 грн</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="pickup-cont delivery-type">
+                                        <div class="delivery">
+                                            <p>Самовывоз с <span>10:00 до 20:00</span></p>
+                                            <p>Вы можете получить ваш заказ </br>
+                                                именно тогда когда вы хотите
+                                            </p>
+                                            <p>Стоимость: <span>0 грн</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="in-ukraine-cont delivery-type">
+                                        <div class="delivery">
+                                            <p>Доставка: Новой Почтой</p>
+                                            <p>Миннимальная сумма заказа - 500 грн</p>
+                                            <p>При заказе до 1500 грн: доставка 150 грн</p>
+                                            <p>Доставка продукции по Украине осуществляется только в сыром виде</p>
+                                        </div>
+                                    </div>
                                 </div>
+
                                 <div class="courier-cont delivery-type">
-                                    <div class="delivery">
-                                        <p>Стоимость: <span>70 грн.</span></p>
-                                        <p>Осуществляется за 3 часа, при заказе <span> c 10:00 до 20:00</span></p>
-                                        <p>После 20:00 доставка на следующий день</p>
-                                        <p>Срок доставки: <span>от 1 до 3 часов</span></p>
-                                        <p>Бесплатная доставка: <span>от 700 грн</span></p>
+                                    <div class="form-group delivery-adress">
+                                        <label>Адрес доставки</label>
+                                        <input type="text" placeholder="Адрес доставки">
+                                    </div>
+                                    <div class="date-selector">
+                                        <div class="label">Желаемое время доставки</div>
+                                        <a href="javascript:void(0);" class="js-calendar">
+                                            <span>14 мая</span>
+                                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                                            <input type="text" data-toggle="datepicker" placeholder="14 мая">
+                                            <script>
+                                                $(document).ready(function(){
+                                                    var picker = $('[data-toggle="datepicker"]').datepicker({
+                                                        language: 'ru-RU',
+                                                        format: 'dd'
+                                                    });
+
+                                                    $('[data-toggle="datepicker"]').on('pick.datepicker', function(){
+                                                        var monthName = picker.datepicker('getMonthName').toLowerCase();
+                                                        setTimeout(function(){
+                                                            picker.val( picker.val() + ' ' + monthName );
+                                                            $('.js-calendar span').text(picker.val());
+                                                        },100);
+                                                    });
+
+                                                });
+                                            </script>
+                                        </a>
+                                        <select data-styler>
+                                            <option>16:00-17:00</option>
+                                            <option>17:00-18:00</option>
+                                            <option>18:00-19:00</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group payment-method">
+                                        <label>Способ оплаты</label>
+                                        <select data-styler>
+                                            <option>Наличный расчет</option>
+                                            <option>Безналичный расчет</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group count-persons">
+                                        <label>Количество персон</label>
+                                        <input data-styler min="1" value="1" type="number">
                                     </div>
                                 </div>
+
                                 <div class="pickup-cont delivery-type">
-                                    <div class="delivery">
-                                        <p>Самовывоз с 10:00 до 20:00.</p>
-                                        <p>Вы можете получить ваш заказ </br>
-                                        именно тогда когда вы хотите
-                                        </p>
-                                        <p>Стоимость: 0 грн</p>
+                                    <div class="form-group">
+                                        <label>Адрес самовывоза:</label>
+                                        <select data-styler>
+                                            <option>
+                                                г. Киев, ул. Анны-Ахматовой, 22
+                                            </option>
+                                            <option>
+                                                г. Киев, пр. Героев Сталинграда, 12
+                                            </option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group count-persons">
+                                        <label>Количество персон</label>
+                                        <input data-styler min="1" value="1" type="number">
                                     </div>
                                 </div>
+
                                 <div class="in-ukraine-cont delivery-type">
-                                    <div class="delivery">
-                                        <p>Доставка: Новой Почтой</p>
-                                        <p>Миннимальная сумма заказа - 500 грн</p>
-                                        <p>При заказе до 1500 грн: доставка 150 грн</p>
-                                        <p>Доставка продукции по Украине осуществляется только в сыром виде</p>
+                                    <div class="form-group">
+                                        <label>Город:</label>
+                                        <input type="text" placeholder="Город">
+                                    </div>
+                                    <div class="form-group np-depart">
+                                        <label>Отделение Новой Почты</label>
+                                        <input type="text" placeholder="Отделение Новой Почты">
                                     </div>
                                 </div>
-                            </div>
-
-                            <div class="courier-cont delivery-type">
-                                <div class="form-group">
-                                    <label>Адрес</label>
-                                    <input type="text">
-                                </div>
-                                <div class="date-selector">
-                                    <div class="label">Желаемая дата доставки</div>
-                                    <a href="javascript:void(0);" class="js-calendar">
-                                        <span>14 мая</span>
-                                        <i class="fa fa-calendar" aria-hidden="true"></i>
-                                        <input type="text" data-toggle="datepicker" placeholder="14 мая">
-                                        <script>
-                                            $(document).ready(function(){
-                                                var picker = $('[data-toggle="datepicker"]').datepicker({
-                                                    language: 'ru-RU',
-                                                    format: 'dd'
-                                                });
-
-                                                $('[data-toggle="datepicker"]').on('pick.datepicker', function(){
-                                                    $(this).val( $(this).val + ' ' + picker.datepicker('getMonthName') );
-                                                });
-                                            });
-                                        </script>
-                                    </a>
-                                    <select data-styler>
-                                        <option>16:00-17:00</option>
-                                        <option>17:00-18:00</option>
-                                        <option>18:00-19:00</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="pickup-cont delivery-type">
-                                <div class="form-group">
-                                    <label>Адрес самовывоза:</label>
-                                    <select data-styler>
-                                        <option>
-                                            г. Киев, ул. Анны-Ахматовой, 22
-                                        </option>
-                                        <option>
-                                            г. Киев, пр. Героев Сталинграда, 12
-                                        </option>
-                                    </select>
-                                </div>
-
                             </div>
 
                             <div class="form-group">
@@ -720,111 +762,122 @@
                                     <a href="javascript:void(0);" data-variant="Скрыть комментарий к заказу" class="js-add-comment">
                                         Добавить комментарий к заказу
                                     </a>
-                                    <textarea class="comment-text"></textarea>
+                                    <textarea class="comment-text" placeholder="Ваше примечание к заказу"></textarea>
                                 </div>
                                 <div class="promo-wrap">
                                     <a href="javascript:void(0);" class="js-add-promo">
                                         Ввести промокод
                                     </a>
                                     <div class="add-promo-wrap">
-                                        <input type="text" class="add-promo">
+                                        <input type="text" class="add-promo" placeholder="Введите промокод">
                                         <buttom class="send-promo">
                                             <i class="fa fa-angle-right" aria-hidden="true"></i>
                                         </buttom>
                                     </div>
                                 </div>
+                            </div>
 
-                            </div>
-                        </form>
-                    </div>
-                    <div class="checkout-cont">
-                        <div class="checkout-list js-checkout-list">
-                            <div class="one-product">
-                                <a href="#" class="img-cont">
-                                    <img src="dist/img/content/product.jpg" alt="">
-                                </a>
-                                <div class="prod-cont">
-                                    <a href="#" class="prod-name">Стейк Рибай выдержанный</a>
-                                    <div class="weight">
-                                        Вес: 0.6 кг
-                                    </div>
-                                    <div class="rape">
-                                        Прожарка: MEDIUM WELL
-                                    </div>
-                                </div>
-                                <div class="product-total">
-                                    Стоимость: <span>400 грн</span>
-                                </div>
-                            </div>
-                            <div class="one-product">
-                                <a href="#" class="img-cont">
-                                    <img src="dist/img/content/product.jpg" alt="">
-                                </a>
-                                <div class="prod-cont">
-                                    <a href="#" class="prod-name">Стейк Рибай выдержанный</a>
-                                    <div class="weight">
-                                        Вес: 0.6 кг
-                                    </div>
-                                    <div class="rape">
-                                        Прожарка: MEDIUM WELL
-                                    </div>
-                                </div>
-                                <div class="product-total">
-                                    Стоимость: <span>400 грн</span>
-                                </div>
-                            </div>
-                            <div class="one-product">
-                                <a href="#" class="img-cont">
-                                    <img src="dist/img/content/product.jpg" alt="">
-                                </a>
-                                <div class="prod-cont">
-                                    <a href="#" class="prod-name">Стейк Рибай выдержанный</a>
-                                    <div class="weight">
-                                        Вес: 0.6 кг
-                                    </div>
-                                    <div class="rape">
-                                        Прожарка: MEDIUM WELL
-                                    </div>
-                                </div>
-                                <div class="product-total">
-                                    Стоимость: <span>400 грн</span>
-                                </div>
-                            </div>
-                            <div class="one-product">
-                                <a href="#" class="img-cont">
-                                    <img src="dist/img/content/product.jpg" alt="">
-                                </a>
-                                <div class="prod-cont">
-                                    <a href="#" class="prod-name">Стейк Рибай выдержанный</a>
-                                    <div class="weight">
-                                        Вес: 0.6 кг
-                                    </div>
-                                    <div class="rape">
-                                        Прожарка: MEDIUM WELL
-                                    </div>
-                                </div>
-                                <div class="product-total">
-                                    Стоимость: <span>400 грн</span>
-                                </div>
-                            </div>
                         </div>
-                        <div class="checkout-total">
-                            <div class="checkout-total-in">
-                                <div class="total-delivery">
-                                    Доставка: <span>70 грн</span>
-                                </div>
-                                <div class="edit-total">
-                                    <a href="javascript:void(0);" class="edit-order">
-                                        Редактировать заказ
+                        <div class="checkout-cont">
+                            <div class="mobile-title-edit">
+                                <h4 class="title">Ваш заказ</h4>
+                                <a href="#" class="edit-order">
+                                    Редактировать
+                                </a>
+                            </div>
+                            <div class="checkout-list js-checkout-list">
+                                <div class="one-product">
+                                    <a href="#" class="img-cont">
+                                        <img src="dist/img/content/product.jpg" alt="">
                                     </a>
-                                    <div class="total-sum">
-                                        Всего: <span>300 грн</span>
+                                    <div class="prod-cont">
+                                        <a href="#" class="prod-name">Стейк Рибай выдержанный</a>
+                                        <div class="weight">
+                                            Вес: 0.6 кг
+                                        </div>
+                                        <div class="rape">
+                                            Прожарка: MEDIUM WELL
+                                        </div>
+                                    </div>
+                                    <div class="product-total">
+                                        Стоимость: <span>400 грн</span>
+                                    </div>
+                                </div>
+                                <div class="one-product">
+                                    <a href="#" class="img-cont">
+                                        <img src="dist/img/content/product.jpg" alt="">
+                                    </a>
+                                    <div class="prod-cont">
+                                        <a href="#" class="prod-name">Стейк Рибай выдержанный</a>
+                                        <div class="weight">
+                                            Вес: 0.6 кг
+                                        </div>
+                                        <div class="rape">
+                                            Прожарка: MEDIUM WELL
+                                        </div>
+                                    </div>
+                                    <div class="product-total">
+                                        Стоимость: <span>400 грн</span>
+                                    </div>
+                                </div>
+                                <div class="one-product">
+                                    <a href="#" class="img-cont">
+                                        <img src="dist/img/content/product.jpg" alt="">
+                                    </a>
+                                    <div class="prod-cont">
+                                        <a href="#" class="prod-name">Стейк Рибай выдержанный</a>
+                                        <div class="weight">
+                                            Вес: 0.6 кг
+                                        </div>
+                                        <div class="rape">
+                                            Прожарка: MEDIUM WELL
+                                        </div>
+                                    </div>
+                                    <div class="product-total">
+                                        Стоимость: <span>400 грн</span>
+                                    </div>
+                                </div>
+                                <div class="one-product">
+                                    <a href="#" class="img-cont">
+                                        <img src="dist/img/content/product.jpg" alt="">
+                                    </a>
+                                    <div class="prod-cont">
+                                        <a href="#" class="prod-name">Стейк Рибай выдержанный</a>
+                                        <div class="weight">
+                                            Вес: 0.6 кг
+                                        </div>
+                                        <div class="rape">
+                                            Прожарка: MEDIUM WELL
+                                        </div>
+                                    </div>
+                                    <div class="product-total">
+                                        Стоимость: <span>400 грн</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="checkout-total">
+                                <div class="checkout-total-in">
+                                    <div class="total-delivery">
+                                        Доставка: <span>70 грн</span>
+                                    </div>
+                                    <div class="edit-total">
+                                        <a href="javascript:void(0);" class="edit-order">
+                                            Редактировать заказ
+                                        </a>
+                                        <div class="total-sum">
+                                            Всего: <span>300 грн</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                    <div class="checkout-submit">
+                        <button class="md-btn md-btn-raised md-btn-ripple">
+                            Оформить заказ
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
@@ -879,6 +932,7 @@
 <script src="dist/libs/jquery.elevateZoom-3.0.8.min.js"></script>
 <script src="dist/libs/datepicker.min.js"></script>
 <script src="dist/libs/datepicker.ru-RU.js"></script>
+<script src="dist/libs/jquery.mask.min.js"></script>
 <script src="dist/js/main.js"></script>
 </body>
 </html>

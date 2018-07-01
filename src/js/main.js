@@ -291,5 +291,7 @@ $(document).ready(function(){
 
     var $date = $('.docs-date');
 
+    $('.js-mask').val('+38-0');
+    $('.js-mask').mask('+38-099-999-99-99');
 
 });

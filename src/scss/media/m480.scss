@@ -420,4 +420,231 @@
       }
     }
   }
+  .checkout-main {
+    h1 {
+      font-size: 17px;
+    }
+    .container-in {
+      width: 300px;
+    }
+    .mobile-title {
+      display: block;
+      font-size: 13px;
+      margin: 0;
+      padding: 8px 0;
+      border-bottom: 1px solid #999999;
+      margin-bottom: 13px;
+      font-weight: normal;
+      text-transform: uppercase;
+    }
+    .checkout-form-wrap {
+      label {
+        font-size: 14px;
+        margin-bottom: 5px;
+        font-family: 'Helios Bold';
+      }
+      .delivery-type {
+        label {
+          display: block;
+          width: 100%;
+        }
+        .np-depart input[type=text] {
+          width: 100%;
+        }
+      }
+      .in-ukraine-cont {
+        label {
+          display: none !important;
+        }
+        .delivery {
+          margin-bottom: 0;
+        }
+      }
+      .pickup-cont {
+        .delivery {
+          margin-bottom: 0;
+        }
+      }
+      input[type=text] {
+        border: none;
+        height: 32px;
+        font-size: 14px;
+        &::placeholder {
+          font-size: 14px;
+        }
+      }
+      .form-group {
+        margin-bottom: 16px;
+      }
+      .not-callback {
+        label {
+          margin-top: 11px;
+        }
+      }
+      .delivery {
+        padding-left: 70px;
+      }
+      .delivery-select-wrap {
+        label {
+          min-width: 70px;
+          width: 70px;
+          font-size: 13px;
+        }
+      }
+      .delivery-adress {
+        label {
+          display: none;
+        }
+      }
+      .date-selector {
+        margin-bottom: 15px;
+        .label {
+          margin-right: 0;
+          font-size: 14px;
+        }
+
+      }
+      .courier-cont {
+        margin-bottom: 0;
+      }
+      .email-group {
+        input[type="email"] {
+          width: auto;
+          flex-grow: 1;
+          height: 32px;
+          font-size: 14px;
+        }
+      }
+      .payment-method {
+        font-size: 14px;
+        font-family: 'Helios Bold';
+        label {
+          display: block;
+          font-size: 13px;
+          margin: 0 0 13px;
+          padding: 8px 0;
+          border-bottom: 1px solid #999;
+          font-weight: 400;
+          text-transform: uppercase;
+          width: 100%;
+        }
+      }
+      .count-persons {
+        label {
+          display: block;
+          font-size: 13px;
+          margin: 0 0 13px;
+          padding: 8px 0;
+          border-bottom: 1px solid #999;
+          font-weight: 400;
+          text-transform: uppercase;
+          width: 100%;
+        }
+      }
+      .jq-number {
+        width: 100%;
+      }
+      .jq-number__field {
+        input {
+          padding: 7px 9px;
+        }
+      }
+      .jq-number__spin {
+        font-size: 25px;
+      }
+    }
+    .checkout-wrap {
+      input[type=email] {
+        border: 0;
+      }
+      .delivery {
+        font-size: 13px;
+        line-height: normal;
+        color: #333333;
+      }
+    }
+    .comment-wrap {
+      .js-add-comment {
+        display: none;
+      }
+      .comment-text {
+        display: block;
+      }
+    }
+    .promo-wrap {
+      .js-add-promo {
+        display: none;
+      }
+      .add-promo-wrap {
+        display: block;
+        width: 100%;
+        .send-promo {
+          width: 28px;
+          border: 1px solid #AFAFAF;
+          .fa {
+            font-size: 19px;
+            margin-top: 3px;
+            color: #AFAFAF;
+          }
+        }
+      }
+    }
+    .checkout-cont {
+      .mobile-title-edit {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px 0;
+        border-bottom: 1px solid #999999;
+        margin-bottom: 19px;
+      }
+      h4 {
+        margin: 0;
+        font-weight: normal;
+        text-transform: uppercase;
+        font-size: 13px;
+      }
+      .edit-order {
+        color: #FF0000;
+        font-size: 13px;
+        text-decoration: none;
+      }
+      .product-total {
+        margin-top: 0;
+        text-align: left;
+        padding-left: 130px;
+        span {
+          font-size: 16px;
+          color: #333333;
+        }
+      }
+      .one-product {
+        padding-bottom: 10px;
+      }
+      .edit-total {
+        font-family: 'Helios Bold';
+        .edit-order {
+          display: none !important;
+        }
+        .total-sum {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          font-size: 14px;
+          span {
+            font-size: 15px;
+            color: #333333;
+          }
+        }
+      }
+      .total-delivery {
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+        span {
+          font-size: 14px;
+          font-family: 'Helios';
+        }
+      }
+    }
+  }
 }

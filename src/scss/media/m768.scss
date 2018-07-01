@@ -601,6 +601,37 @@
       font-size: 19px;
     }
   }
+  .checkout-main {
+    .container-in {
+      width: 500px;
+      padding-bottom: 35px;
+    }
+    h1 {
+      margin: 0 0 20px;
+      font-size: 24px;
+    }
+    .checkout-wrap {
+      label {
+        width: 140px;
+      }
+      .not-callback {
+        label {
+          margin-left: 140px;
+        }
+      }
+      .delivery {
+        margin-left: 140px;
+      }
+    }
+    .checkout-form-wrap {
+      width: 100%;
+      .delivery-type {
+        label {
+          width: 145px;
+        }
+      }
+    }
+  }
 }
 @media (max-width: 600px) {
   header {
@@ -678,6 +709,107 @@
     }
     .pagination {
       font-size: 20px;
+    }
+  }
+  .checkout-main {
+    background: #F2F2F2;
+    .container-in {
+      width: 450px;
+    }
+    .checkout-wrap {
+      label {
+        display: none;
+        font-family: 'Helios';
+      }
+      input[type=email], input[type=text] {
+        width: 100%;
+      }
+      .not-callback {
+        label {
+          margin-left: 0;
+        }
+      }
+      .jq-selectbox {
+        width: 100%;
+      }
+      .jq-selectbox__select {
+        width: 100%;
+      }
+      .delivery {
+        margin-left: 0;
+      }
+    }
+    .checkout-form-wrap {
+      padding-bottom: 20px;
+      .delivery-select-wrap {
+        label {
+          display: flex;
+        }
+      }
+      .delivery-adress {
+        label {
+          display: flex;
+        }
+        input[type="text"] {
+          width: auto;
+          flex-grow: 1;
+        }
+      }
+      .date-selector {
+        flex-wrap: wrap;
+        .label {
+          width: 100%;
+          margin-bottom: 8px;
+        }
+        .js-calendar {
+          width: auto;
+        }
+        .jq-selectbox {
+          width: 50%;
+        }
+      }
+      .payment-method {
+        .jq-selectbox {
+          width: auto;
+          flex-grow: 1;
+        }
+        .jq-selectbox__select {
+          width: 100%;
+        }
+        label {
+          display: flex;
+        }
+      }
+      .count-persons {
+        justify-content: space-between;
+        label {
+          display: flex;
+          width: auto;
+        }
+        .jq-number__field {
+          width: auto;
+        }
+        .jq-number {
+          background: #FFFFFF;
+        }
+      }
+    }
+    .checkout-cont {
+      width: 100%;
+      box-shadow: none;
+      padding: 0;
+      .checkout-list {
+        height: 100%;
+        &:after {
+          background: none;
+        }
+      }
+      .one-product {
+        border-bottom: 1px solid #D7D7D7;
+        &:last-child {
+          border-bottom: 0;
+        }
+      }
     }
   }
 }
