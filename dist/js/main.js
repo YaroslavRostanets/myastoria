@@ -294,4 +294,11 @@ $(document).ready(function(){
     $('.js-mask').val('+38-0');
     $('.js-mask').mask('+38-099-999-99-99');
 
+    $('.home-slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        prevArrow: '<a href="javascript:void(0)" class="arrow prev-arrow"></a>',
+        nextArrow: '<a href="javascript:void(0)" class="arrow next-arrow"></a>'
+    });
+
 });
