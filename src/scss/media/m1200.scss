@@ -250,6 +250,19 @@
       }
     }
   }
+  .home-main {
+    .bestsellers {
+      h3 {
+        margin: 0 0 10px;
+        font-size: 35px;
+      }
+    }
+    .seo-cont {
+      h3 {
+        font-size: 35px;
+      }
+    }
+  }
 }
 
 @media (max-width: 1100px) {

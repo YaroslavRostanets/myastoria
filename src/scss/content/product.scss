@@ -74,6 +74,9 @@
       text-decoration: underline;
     }
   }
+  .btn-cont {
+    display: flex;
+  }
   .roasting-title {
     font-size: 16px;
     color: #171717;
@@ -110,6 +113,9 @@
     font-family: 'Helios Bold';
     color: #3A3A3A;
     text-align: center;
+  }
+  .js-open-basket {
+    padding-top: 9px;
   }
   .mobile-char {
     display: none;

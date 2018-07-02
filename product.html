@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="dist/libs/jquery.mCustomScrollbar.min.css">
     <link rel="stylesheet" href="dist/libs/jquery.formstyler.css">
     <link rel="stylesheet" href="dist/libs/jquery.formstyler.theme.css">
+    <link rel="stylesheet" href="dist/libs/jquery.modal.min.css">
     <link rel="stylesheet" href="dist/css/main.min.css">
     <script
             src="https://code.jquery.com/jquery-1.12.4.min.js"
@@ -711,14 +712,24 @@
                                     Цена: <span>65.00 грн/100г</span>
                                 </div>
                                 <div class="btn-cont">
-                                    <button class="md-btn md-btn-raised md-btn-ripple">
+                                    <a href="#basket" class="js-open-basket md-btn md-btn-raised md-btn-ripple">
                                         Купить
-                                    </button>
+                                    </a>
                                     <button class="one-click md-btn md-btn-raised md-btn-ripple">
                                         Купить в 1 клик
                                     </button>
                                 </div>
                             </div>
+
+                            <script>
+                                $('.js-open-basket').on('click', function(){
+
+                                    $( $(this).attr('href') ).modal({
+                                        fadeDuration: 500,
+                                        fadeDelay: 0.25
+                                    });
+                                });
+                            </script>
 
                         </div>
 
@@ -1204,12 +1215,127 @@
         </div>
     </footer>
 
+    <!-- Модалка Корзина -->
+    <div id="basket" class="modal">
+        <a href="#close-modal" rel="modal:close" class="js-close-modal"></a>
+        <div class="modal-title">
+            Товар добавлен в корзину
+        </div>
+        <div class="products-list">
+            <div class="one-product">
+                <a href="#" class="prod-img">
+                    <img src="dist/img/content/thumb1.jpg" alt="">
+                </a>
+                <div class="prod-info">
+                    <a href="#" class="prod-name">Стейк Рибай выдержанный</a>
+                    <div class="price">Цена: <span>65 грн/100г</span></div>
+                    <div class="bot">
+                        <div class="rape">
+                            <div class="label">Прожарка</div>
+                            <select data-styler="">
+                                <option>Без прожарки</option>
+                                <option>MEDIUM WELL</option>
+                            </select>
+                        </div>
+                        <div class="count-price">
+                            <input data-styler="" value="0.5" type="number">
+                            <div class="sum">250 грн</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="one-product">
+                <a href="#" class="prod-img">
+                    <img src="dist/img/content/thumb1.jpg" alt="">
+                </a>
+                <div class="prod-info">
+                    <a href="#" class="prod-name">Стейк Рибай выдержанный</a>
+                    <div class="price">Цена: <span>65 грн/100г</span></div>
+                    <div class="bot">
+                        <div class="rape">
+                            <div class="label">Прожарка</div>
+                            <select data-styler="">
+                                <option>Без прожарки</option>
+                                <option>MEDIUM WELL</option>
+                            </select>
+                        </div>
+                        <div class="count-price">
+                            <input data-styler="" value="0.5" type="number">
+                            <div class="sum">250 грн</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="one-product">
+                <a href="#" class="prod-img">
+                    <img src="dist/img/content/thumb1.jpg" alt="">
+                </a>
+                <div class="prod-info">
+                    <a href="#" class="prod-name">Стейк Рибай выдержанный</a>
+                    <div class="price">Цена: <span>65 грн/100г</span></div>
+                    <div class="bot">
+                        <div class="rape">
+                            <div class="label">Прожарка</div>
+                            <select data-styler="">
+                                <option>Без прожарки</option>
+                                <option>MEDIUM WELL</option>
+                            </select>
+                        </div>
+                        <div class="count-price">
+                            <input data-styler="" value="0.5" type="number">
+                            <div class="sum">250 грн</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="one-product">
+                <a href="#" class="prod-img">
+                    <img src="dist/img/content/thumb1.jpg" alt="">
+                </a>
+                <div class="prod-info">
+                    <a href="#" class="prod-name">Стейк Рибай выдержанный</a>
+                    <div class="price">Цена: <span>65 грн/100г</span></div>
+                    <div class="bot">
+                        <div class="rape">
+                            <div class="label">Прожарка</div>
+                            <select data-styler="">
+                                <option>Без прожарки</option>
+                                <option>MEDIUM WELL</option>
+                            </select>
+                        </div>
+                        <div class="count-price">
+                            <input data-styler="" value="0.5" type="number">
+                            <div class="sum">250 грн</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="basket-total">
+            В корзине есть товары на сумму
+            <span>400 грн</span>
+        </div>
+        <div class="bot-controls">
+            <a href="#" class="continue">
+                <i class="fa fa-angle-left" aria-hidden="true"></i>
+                <span>Продолжить покупки</span>
+            </a>
+            <a href="javascript:void(0);" class="md-btn md-btn-raised md-btn-ripple">
+                Оформить заказ
+            </a>
+        </div>
+    </div>
+    <!-- конец Можалка Корзина -->
+
     <script src="dist/libs/jquery.formstyler.min.js"></script>
     <script src="https://use.fontawesome.com/35f65baac5.js"></script>
     <script src="dist/libs/jquery.mCustomScrollbar.min.js"></script>
     <script src="dist/libs/slick.min.js"></script>
     <script src="dist/libs/jquery.modal.min.js"></script>
     <script src="dist/libs/jquery.elevateZoom-3.0.8.min.js"></script>
+    <script src="dist/libs/datepicker.min.js"></script>
+    <script src="dist/libs/datepicker.ru-RU.js"></script>
+    <script src="dist/libs/jquery.mask.min.js"></script>
     <script src="dist/js/main.js"></script>
 </body>
 </html>

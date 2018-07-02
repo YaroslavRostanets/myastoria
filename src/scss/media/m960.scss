@@ -230,4 +230,19 @@
       margin: 0 auto 20px auto;
     }
   }
+  .home-main {
+    .catalog-tile {
+      height: auto;
+      &:hover {
+        .catalog-tile-in {
+          background: transparent;
+          box-shadow: none;
+        }
+        .img {
+          transform: scale(1.0);
+        }
+      }
+
+    }
+  }
 }

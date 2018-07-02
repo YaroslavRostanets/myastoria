@@ -318,12 +318,17 @@
   }
   .jq-radio {
     box-shadow: none;
-    vertical-align: -2px;
     background: #FFFFFF;
     border: 1px solid #7C7C7C;
+    position: relative;
     &.checked {
       border: 1px solid #EC1C29;
       .jq-radio__div {
+        position: absolute;
+        top: 50%;
+        left: 13px;
+        transform: translate(-50%,-50%);
+        margin: 0 0;
         width: 8px;
         height: 8px;
         background: #EC1C29;
@@ -402,3 +407,4 @@
     justify-content: center;
   }
 }
+

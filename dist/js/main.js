@@ -162,7 +162,7 @@ $(document).ready(function(){
 
     (function($){
         $(window).on("load",function(){
-            $('.search-result, .js-checkout-list').mCustomScrollbar();
+            $('.search-result, .js-checkout-list, .products-list').mCustomScrollbar();
 
         });
     })(jQuery);
@@ -298,7 +298,11 @@ $(document).ready(function(){
         slidesToShow: 1,
         slidesToScroll: 1,
         prevArrow: '<a href="javascript:void(0)" class="arrow prev-arrow"></a>',
-        nextArrow: '<a href="javascript:void(0)" class="arrow next-arrow"></a>'
+        nextArrow: '<a href="javascript:void(0)" class="arrow next-arrow"></a>',
+        dots: true,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        pauseOnHover: false
     });
 
 });

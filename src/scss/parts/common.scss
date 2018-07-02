@@ -197,3 +197,9 @@ main {
       color: #797979;
     }
 }
+.blocker {
+    z-index: 99;
+}
+.modal {
+    border-radius: 0;
+}

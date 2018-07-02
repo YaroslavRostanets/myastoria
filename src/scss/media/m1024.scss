@@ -169,5 +169,25 @@
       }
     }
   }
+  .home-main {
+    .container-in {
+      padding-bottom: 40px;
+    }
+    .bestsellers {
+      h3 {
+        margin: 0 0 15px;
+        font-size: 30px;
+      }
+    }
+    .seo-cont {
+      h3 {
+        font-size: 30px;
+      }
+      .seo-text {
+        width: 100%;
+        padding: 0 25px;
+      }
+    }
+  }
 }
 
