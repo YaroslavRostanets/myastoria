@@ -703,4 +703,63 @@
       }
     }
   }
+  .catalog-main {
+    .catalog-tiles-container {
+      .sort {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 10px 5px;
+      }
+      .one-sort {
+        margin-bottom: 15px;
+        width: 100%;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+    .tiles-wrap {
+      padding: 0;
+    }
+    .articles-cont {
+      h3 {
+        margin: 0 0 13px;
+        font-size: 25px;
+      }
+      .articles-wrap {
+
+      }
+    }
+    .seo-cont {
+      h3 {
+        font-size: 23px;
+        margin: 0 0 10px;
+      }
+      .seo-text {
+        padding: 0 5px;
+      }
+    }
+    .feedback-cont {
+      padding: 0;
+    }
+    .baner {
+      position: relative;
+      min-height: 150px;
+      .breadcrumbs {
+        z-index: 2;
+      }
+      .page-title-container {
+        z-index: 2;
+      }
+      img {
+        height: 100%;
+        width: auto;
+        top: 50%;
+        left:  50%;
+        transform: translate(-50%,-50%);
+        position: absolute;
+        z-index: 1;
+      }
+    }
+  }
 }

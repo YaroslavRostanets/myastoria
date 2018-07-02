@@ -245,4 +245,24 @@
 
     }
   }
+  .catalog-main {
+    .catalog-tile {
+      &:hover {
+        .catalog-tile-in {
+          box-shadow: none;
+          background: transparent;
+        }
+        .img-cont {
+          .img {
+            transform: scale(1.0);
+          }
+        }
+      }
+    }
+    .sort {
+      .jq-selectbox__select {
+        background: #FFFFFF;
+      }
+    }
+  }
 }

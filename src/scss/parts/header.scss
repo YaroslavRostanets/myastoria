@@ -203,6 +203,8 @@ header {
       position: relative;
       display: flex;
       align-items: center;
+      overflow: visible;
+      cursor: pointer;
       .total {
         background: #EC1C29 none repeat scroll 0 0;
         border-radius: 4px;
@@ -237,6 +239,131 @@ header {
       align-items: center;
     }
   }
+  .cart-contain {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 280px;
+    background: #FFFFFF;
+    z-index: 9;
+    padding: 5px 0px 20px 20px;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
+    border-top: 2px solid #EC1C29;
+    .product-item-cart {
+      display: flex;
+      border-bottom: 1px solid #b0b7b9;
+      overflow: hidden;
+      padding-bottom: 20px;
+      padding-top: 20px;
+      position: relative;
+    }
+    .cart-img {
+      min-width: 50px;
+      margin-right: 8px;
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
+    .prod-info {
+      .sum {
+        display: block;
+        color: #EC1C29;
+        font-size: 13px;
+        font-weight: 700;
+        white-space: nowrap;
+        margin-left: 10px;
+      }
+    }
+    .prod-name {
+      font-family: 'Helios';
+      font-size: 14px;
+      transition: all 0.1s ease;
+      display: block;
+      margin-bottom: 7px;
+      &:hover {
+        color: #EC1C29;
+      }
+    }
+    .top-subtotal {
+      border-bottom: 1px solid #b0b7b9;
+      color: #323333;
+      display: flex;
+      font-size: 16px;
+      font-weight: 700;
+      padding: 12px 0;
+      text-transform: uppercase;
+      justify-content: space-between;
+      margin-right: 16px;
+      span {
+        font-size: 15px;
+      }
+    }
+    .items {
+      overflow-y: auto;
+      height: 235px;
+    }
+    .cart-btn-3 {
+      display: block;
+      padding: 20px 0 0;
+      .button {
+        border: 2px solid #323333;
+        color: #323333;
+        display: inline-block;
+        font-size: 12px;
+        font-weight: 700;
+        margin-right: 10px;
+        padding: 5px 27px 5px 15px;
+        position: relative;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: all 0.1s ease;
+        &:hover {
+          color: #EC1C29;
+          border-color: #EC1C29;
+        }
+        &:after {
+          content: "";
+          font-family: fontawesome;
+          font-size: 13px;
+          position: absolute;
+          right: 10px;
+          top: 5px;
+        }
+      }
+    }
+    .flex {
+      display: flex;
+      align-items: center;
+    }
+    .jq-number {
+      padding: 0 24px 0 0;
+      margin-right: 10px;
+    }
+    .jq-number__field {
+      width: 40px;
+      border-radius: 0px;
+    }
+    .jq-number__spin {
+      width: 25px;
+      height: 18px;
+      border-radius: 0px;
+      &.minus {
+        top: auto;
+        bottom: 0;
+        &:after {
+          left: 7px;
+        }
+      }
+      &.plus {
+        &:after {
+          left: 7px;
+        }
+      }
+    }
+  }
+
   .mCSB_scrollTools .mCSB_draggerRail {
     width: 6px;
     background-color: rgba(241,241,241,1);

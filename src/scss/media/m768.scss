@@ -901,4 +901,14 @@
       min-width: 190px;
     }
   }
+  .catalog-main {
+    background: #F2F2F2;
+    .seo-cont {
+      .text-in {
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
 }
