@@ -39,6 +39,16 @@
     .bot-part {
       padding: 0 25px 0 25px;
     }
+    .nav>li {
+      .menu-dropdown {
+        .menu-dropdown-in>li {
+          width: 220px;
+        }
+      }
+    }
+    .product-photo {
+      width: 325px;
+    }
   }
   .baner {
     .page-title-container {
@@ -275,6 +285,11 @@
       .menu-dropdown {
         top: calc(100% + 16px);
       }
+    }
+    .product-photo {
+      width: 260px;
+      padding-right: 5px;
+      padding-top: 5px;
     }
   }
   .baner {

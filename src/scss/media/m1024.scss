@@ -4,6 +4,9 @@
       padding: 7px;
       font-size: 13px;
     }
+    .product-photo {
+      display: none !important;
+    }
   }
   .baner {
     .breadcrumbs {
@@ -86,6 +89,12 @@
     .breadcrumbs {
       font-size: 14px;
       height: 70px;
+    }
+    .count-price {
+      .md-btn {
+        width: 155px;
+        min-width: 155px;
+      }
     }
     .prod-top {
       .info-cont {

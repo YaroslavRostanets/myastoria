@@ -212,7 +212,7 @@ $(document).ready(function(){
                 $('.menu-first-level').animate({
                     opacity: 0,
                     marginLeft: '-50px'
-                }, 'slow', 'linear', function() {
+                }, 300, 'linear', function() {
                     $('.mobile-second-level').attr('style','');
                     $(this).hide();
                 });
@@ -224,7 +224,7 @@ $(document).ready(function(){
         $('.mobile-second-level').animate({
             opacity: 0,
             marginLeft: '50px'
-        }, 'slow', 'linear', function() {
+        }, 300, 'linear', function() {
             $('.menu-first-level').attr('style','');
         });
     });
@@ -239,7 +239,7 @@ $(document).ready(function(){
                 $('.mobile-second-level').animate({
                     opacity: 0,
                     marginLeft: '-50px'
-                }, 'slow', 'linear', function() {
+                }, 300, 'linear', function() {
                     $('.mobile-third-level').attr('style','');
                     $(this).hide();
                 });
@@ -251,7 +251,7 @@ $(document).ready(function(){
         $('.mobile-third-level').animate({
             opacity: 0,
             marginLeft: '50px'
-        }, 'slow', 'linear', function() {
+        }, 300, 'linear', function() {
             $('.mobile-second-level').attr('style','');
         });
     });
@@ -297,8 +297,8 @@ $(document).ready(function(){
 
     var $date = $('.docs-date');
 
-    $('.js-mask').val('+38-0');
-    $('.js-mask').mask('+38-099-999-99-99');
+    $('.js-mask').val('+38');
+    $('.js-mask').mask('+38(099)-999-99-99');
 
     $('.home-slider').slick({
         slidesToShow: 1,
@@ -315,6 +315,11 @@ $(document).ready(function(){
         $(this).find('.cart-contain').fadeIn(100);
     },function(){
         $(this).find('.cart-contain').fadeOut(100);
+    });
+
+    $('.roasting-select a').on('click', function(){
+        $(this).siblings().removeClass('selected');
+        $(this).addClass('selected');
     });
 
 });

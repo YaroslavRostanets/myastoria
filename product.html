@@ -17,6 +17,14 @@
             integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
             crossorigin="anonymous">
     </script>
+
+    <!-- Только для этой страницы -->
+
+    <link rel="stylesheet" href="dist/libs/jquery.toastmessage.css">
+    <script src="dist/libs/jquery.toastmessage.js"></script>
+
+    <!-- конец Только для этой страницы -->
+
 </head>
 <body>
     <header>
@@ -700,9 +708,9 @@
                                 <i class="fa fa-star" aria-hidden="true"></i>
                                 <i class="fa fa-star" aria-hidden="true"></i>
                             </div>
-                            <div class="reviews">
-                                Отзывы: 5
-                            </div>
+                            <a href="#" class="reviews">
+                                        Отзывы: 5
+                                    </a>
                         </div>
                         <div class="mobile-price">
                             Цена: 65.00 грн/100г
@@ -770,32 +778,44 @@
                         </div>
 
                         <div class="count-price">
-                            <div class="count-wrap">
-                                <input data-styler value="0.5" type="number">
-                                <div class="mobile-sum">
-                                    Сумма: <span>359.99 грн</span>
-                                </div>
+                            <div class="top-price">
+                                Цена: <span>65.00 грн/100г</span>
                             </div>
-                            <div class="price-wrap">
-                                <div class="price">
-                                    Цена: <span>65.00 грн/100г</span>
+                            <div class="sum-count">
+                                <div class="count-wrap">
+                                    <input data-styler value="0.5" type="number">
+                                    <div class="mobile-sum">
+                                        Сумма: <span>359.99 грн</span>
+                                    </div>
                                 </div>
-                                <div class="btn-cont">
-                                    <a href="#basket" class="js-open-basket md-btn md-btn-raised md-btn-ripple">
-                                        Купить
-                                    </a>
-                                    <button class="one-click md-btn md-btn-raised md-btn-ripple">
-                                        Купить в 1 клик
-                                    </button>
+                                <div class="price">
+                                    65.00 грн
                                 </div>
                             </div>
 
+                            <div class="btn-cont">
+                                <a href="#basket" class="js-open-basket md-btn md-btn-raised md-btn-ripple">
+                                    Купить
+                                </a>
+                                <button class="one-click md-btn md-btn-raised md-btn-ripple">
+                                    Купить в 1 клик
+                                </button>
+                            </div>
+
                             <script>
-                                $('.js-open-basket').on('click', function(){
+                                /*$('.js-open-basket').on('click', function(){
 
                                     $( $(this).attr('href') ).modal({
                                         fadeDuration: 500,
                                         fadeDelay: 0.25
+                                    });
+                                });*/
+                                $('.js-open-basket').on('click', function(){
+                                    $().toastmessage('showToast', {
+                                        text     : 'Товар добавлен в корзину',
+                                        sticky   : false,
+                                        position : 'top-right',
+                                        type     : 'success'
                                     });
                                 });
                             </script>

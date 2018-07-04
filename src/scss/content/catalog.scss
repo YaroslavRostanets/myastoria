@@ -5,13 +5,17 @@
   .sort {
     padding: 30px 38px 10px 38px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     color: #171717;
     font-size: 16px;
     font-family: 'Helios Bold';
     .one-sort {
       display: flex;
+      margin-right: 25px;
+      &:last-child {
+        margin-right: 0;
+      }
     }
     .label {
       display: flex;
@@ -141,6 +145,11 @@
     color: #EC1C29;
     .fa {
       font-size: 23px;
+    }
+  }
+  .reviews {
+    &:hover {
+      text-decoration: underline;
     }
   }
   .catalog-tile-in {

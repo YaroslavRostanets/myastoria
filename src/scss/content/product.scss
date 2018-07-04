@@ -59,6 +59,9 @@
     .reviews {
       color: #797979;
       font-size: 16px;
+      &:hover {
+        text-decoration: underline;
+      }
     }
     .fa {
       color: #C60035;
@@ -95,6 +98,11 @@
       width: 63px;
       height: 43px;
       margin-right: 22px;
+      border: 2px solid transparent;
+      border-radius: 12px;
+      &.selected {
+        border: 2px solid #FE1E33;
+      }
       &:last-child {
         margin-right: 0;
       }
@@ -105,7 +113,24 @@
     }
   }
   .roasting {
-    margin-bottom: 35px;
+    margin-bottom: 15px;
+  }
+  .top-price {
+    font-size: 22px;
+    font-family: "Helios";
+    margin-bottom: 25px;
+    span {
+      font-family: "Helios Bold";
+    }
+  }
+  .sum-count {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    .price {
+      font-family: "Helios Bold";
+      margin-bottom: 0;
+    }
   }
   .mobile-price {
     display: none;
@@ -145,11 +170,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 30px 0 15px;
+    padding: 0 30px 0 0;
   }
   .count-price {
     display: flex;
-
+    flex-direction: column;
   }
   .jq-number {
     display: flex;
@@ -214,7 +239,7 @@
       font-family: 'Helios Bold';
     }
   }
-  .price-wrap {
+  .count-price {
     .md-btn {
       height: 40px;
       width: 215px;

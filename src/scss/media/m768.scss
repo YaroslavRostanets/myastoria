@@ -648,6 +648,14 @@
         font-size: 14px;
       }
     }
+    .seo-cont {
+      .text-in {
+        &:after {
+          background: #F2F2F2;
+          background: linear-gradient(to bottom,rgba(242,242,242,0),rgba(242,242,242,1));
+        }
+      }
+    }
   }
   #basket {
     max-width: 510px;
@@ -714,7 +722,8 @@
       padding-top: 15px;
     }
     .container-in {
-      width: 380px;
+      width: 100%;
+      padding: 0 15px;
     }
     .one-share {
       margin-bottom: 20px;
@@ -880,9 +889,6 @@
       }
       .text-in {
         max-height: 475px;
-        &:after {
-          display: none;
-        }
       }
     }
     .tiles-wrap {
