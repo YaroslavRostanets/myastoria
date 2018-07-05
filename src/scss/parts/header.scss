@@ -529,6 +529,8 @@ header {
         flex-grow: 1;
         padding-left: 3px;
         outline: none;
+        background: #FFFFFF;
+        margin-right: 8px;
         &::placeholder {
           font-size: 13px;
           font-style: italic;

@@ -113,6 +113,11 @@
     .product-name {
       display: none;
     }
+    .count-price {
+      .one-click {
+        background: #FFFFFF;
+      }
+    }
     .reviews-rank {
       padding: 8px 0;
       justify-content: center;
@@ -130,6 +135,9 @@
       .rank {
         margin-right: 0;
       }
+    }
+    .jq-number__field {
+      background: #FFFFFF;
     }
     .mobile-price {
       display: block;
@@ -548,6 +556,9 @@
       .back-to-catalog {
         color: #FF0000;
         margin-right: 20px;
+        border: 2px solid #FF0000;
+        border-radius: 4px;
+        background: #FFFFFF;
         span {
           text-decoration: none;
           font-family: 'Helios Bold';

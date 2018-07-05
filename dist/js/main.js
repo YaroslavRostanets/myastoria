@@ -292,7 +292,19 @@ $(document).ready(function(){
     });
 
     $('.js-add-promo').on('click', function(){
-        $(this).closest('.promo-wrap').find('.add-promo-wrap').fadeIn();
+        var variant = $(this).attr('data-variant');
+
+        if ( $(this).hasClass('opened') ) {
+            $(this).removeClass('opened');
+            $(this).attr('data-variant', $(this).text() );
+            $(this).text( variant );
+            $('.add-promo-wrap').closest('.promo-wrap').find('.add-promo-wrap').fadeOut(100);
+        } else {
+            $(this).addClass('opened');
+            $(this).attr('data-variant', $(this).text() );
+            $(this).text( variant );
+            $('.add-promo-wrap').closest('.promo-wrap').find('.add-promo-wrap').fadeIn(100);
+        }
     });
 
     var $date = $('.docs-date');
