@@ -334,4 +334,11 @@ $(document).ready(function(){
         $(this).addClass('selected');
     });
 
+    $('.js-sign-in').on('click', function(event){
+        console.log('la');
+        $(this).modal();
+        return false;
+    });
+
+
 });
