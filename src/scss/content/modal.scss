@@ -227,10 +227,13 @@
     border: 2px solid #BDBDBD;
     border-radius: 8px;
     height: 40px;
+    padding-left: 25px;
     &::placeholder {
-      padding-left: 15px;
       color: #D9D9D9;
       font-size: 15px;
+    }
+    &:focus {
+      outline: none;
     }
   }
   .md-btn {
