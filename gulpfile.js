@@ -1,48 +1,35 @@
-// [ БАЗОВІ НАЛАШТУВАННЯ ]
-var gulp = require('gulp'), //Відповідно сам gulp
-    concat = require('gulp-concat'), //Обєднання файлів
-    rename = require("gulp-rename"), //Перейменування файлів
-    sourcemaps = require('gulp-sourcemaps'), //Робота з переліком файлів
-    watch = require('gulp-watch'); //Наглядачі
+var gulp = require('gulp'),
+    concat = require('gulp-concat'),
+    rename = require("gulp-rename"),
+    sourcemaps = require('gulp-sourcemaps'),
+    watch = require('gulp-watch');
 
-//Сервер для розробки
-var cached = require('gulp-cached'), //Кешування файлів для прискорення обробки в память
-    remember = require('gulp-remember'), //
-    connect = require('gulp-connect'); //Livereload Server
+var cached = require('gulp-cached'),
+    remember = require('gulp-remember'),
+    connect = require('gulp-connect');
 
-// [ ОБРОБКА ]
-// [ LESS ]
-var less = require('gulp-less'); //Підключення LESS
-// [ SASS ]
-var compass = require('gulp-compass'), //Підключення COMPAS
-    scss = require('gulp-sass'); //Підключення SASS
+var less = require('gulp-less');
 
-//Вихідна обобка файлів CSS, JS
-var uglify = require('gulp-uglify'), //Архівація JS файлів
-    minifyCss = require('gulp-minify-css'), //Архівація CSS файлів
-    cssBase64 = require('gulp-css-base64'); //transform all resources found in a CSS into base64-encoded data URI strings
-//You can ignore a resource with a comment /*base64:skip*/ in CSS file after url definition.
+var compass = require('gulp-compass'),
+    scss = require('gulp-sass');
 
-//var gulpif = require('gulp-if'),
+
+var uglify = require('gulp-uglify'),
+    minifyCss = require('gulp-minify-css'),
+    cssBase64 = require('gulp-css-base64');
+
 var sprite = require('gulp-sprite-generator');
 
-//Вихідна обобка файлів JPG, PNG
-var imagemin = require('gulp-imagemin'), //Обробка зображень
-    imagePngquant = require('imagemin-pngquant'), //Обробка зображень формату PNG
-    imageminJpegtran = require('imagemin-jpegtran'), //Обробка зображень формату JPG
-    imageSvgo = require('imagemin-svgo'), //Обробка зображень формату SVG
-    imageResize = require('gulp-image-resize'); //
+var imagemin = require('gulp-imagemin'),
+    imagePngquant = require('imagemin-pngquant'),
+    imageminJpegtran = require('imagemin-jpegtran'),
+    imageSvgo = require('imagemin-svgo'),
+    imageResize = require('gulp-image-resize');
 
-// [ ТЕСТУВАННЯ ]
-//Перевірка коду
-var jshint = require('gulp-jshint'), //Перевірка JS
-    stylish = require('jshint-stylish'), //Stylish
-//cssLint = require('gulp-csslint'); //Перевірка CSS
-    scssLint = require('gulp-scss-lint'); //Перевірка SCSS
-//gem install scss-lint  !!ОБОВЯЗКОВО
+var jshint = require('gulp-jshint'),
+    stylish = require('jshint-stylish'),
+    scssLint = require('gulp-scss-lint');
 
-
-//Джерела
 var dev_patches = {
     'js': ['./src/js/*'],
     'font': ['./src/font/*'],
@@ -56,23 +43,21 @@ var dev_patches = {
     'images': ['./src/img/**/*'],
     'images-css': ['./src/imgcss']
 };
-//Точки слідування
+
 var build_patches = {
-    'images': './dist/img/',
-    'js': './dist/js/',
-    'css': './dist/css/',
-    'font': './dist/font/'
-};
-//Джерела точок слідування
-var build_patches_copy_list = {
-    'images': './dist/img/**/*',
-    'js': './dist/js/**/*',
-    'css': './dist/css/**/*',
-    'font': './dist/font/**/*'
+    'images': './local/templates/main/img/',
+    'js': './local/templates/main/js/',
+    'css': './local/templates/main/css/',
+    'font': './local/templates/main/font/'
 };
 
-//build yii patches
-//Для копіювання до теми фреймворку
+var build_patches_copy_list = {
+    'images': './local/templates/main/img/**/*',
+    'js': './local/templates/main/js/**/*',
+    'css': './local/templates/main/css/**/*',
+    'font': './local/templates/main/font/**/*'
+};
+
 var yii_base_path = '../web';
 var yii_patches = {
     'images': yii_base_path + '/img/',
@@ -81,12 +66,6 @@ var yii_patches = {
     'font': yii_base_path + '/font/'
 };
 
-// [ ЗАВДАННЯ ТЕСТОВІ ]
-//------------------------------------------------------------------------
-
-// [ ПРОГРАМА ]
-// [ НАЛАШТУВАННЯ SERVER ]
-// Rerun the task when a file changes
 gulp.task('watch', function () {
     gulp.watch(dev_patches['js'], ['scripts']);
     gulp.watch(dev_patches['images'], ['images']);
@@ -101,13 +80,6 @@ gulp.task('default', ['watch', 'scss', 'less', 'scripts', 'images', 'minify-css'
 //'webserver', 'livereload', 'base64'
 //------------------------------------------------------------------------
 
-//Копіювання файлів у тему
-gulp.task('yii:build', function () {
-    gulp.src(build_patches_copy_list['images']).pipe(gulp.dest(yii_patches['images']));
-    gulp.src(build_patches_copy_list['js']).pipe(gulp.dest(yii_patches['js']));
-    gulp.src(build_patches_copy_list['css']).pipe(gulp.dest(yii_patches['css']));
-    gulp.src(build_patches_copy_list['font']).pipe(gulp.dest(yii_patches['font']));
-});
 
 gulp.task('font', function () {
     gulp.src(dev_patches['font'])
@@ -142,24 +114,7 @@ gulp.task('sprites', function () {
     spriteOutput.img.pipe(gulp.dest("./src/img"));
 });
 
-// [ ЗАВДАННЯ ]
-//------------------------------------------------------------------------
 
-// [ НАЛАШТУВАННЯ SERVER ]
-//gulp.task('webserver', function () {
-//    connect.server({
-//        port: 8088,
-//        livereload: true
-//    });
-//});
-//
-//gulp.task('livereload', function () {
-//    gulp.src(['./**/*'])
-//            .pipe(connect.reload());
-//});
-//------------------------------------------------------------------------
-
-// [ ОБРОБКА COMPASS ]
 gulp.task('compass', function () {
     gulp.src(dev_patches['scss'])
     // .pipe(plumber({
@@ -179,9 +134,6 @@ gulp.task('compass', function () {
         .pipe(gulp.dest(build_patches['css']));
 });
 
-//------------------------------------------------------------------------
-
-// [ ОБРОБКА LESS ]
 gulp.task('less', function () {
     return gulp.src(dev_patches['less'])
         .pipe(sourcemaps.init())
@@ -191,10 +143,6 @@ gulp.task('less', function () {
         .pipe(gulp.dest(dev_patches['css-base']));
 });
 
-//------------------------------------------------------------------------
-
-// [ ОБРОБКА SASS ]
-//['lintSCSS']
 gulp.task('scss', function () {
     return gulp.src(dev_patches['scss'])
         .pipe(sourcemaps.init())
@@ -204,7 +152,6 @@ gulp.task('scss', function () {
         .pipe(gulp.dest(dev_patches['css-base']));
 });
 
-// [ ПЕРЕВІРКА КОДУ SCSS ]
 gulp.task('lintSCSS', function () {
     return gulp.src(dev_patches['scss'])
         .pipe(cached('lintingCSS'))
@@ -215,8 +162,7 @@ gulp.task('lintSCSS', function () {
 });
 //------------------------------------------------------------------------
 
-// [ ОБРОБКА CSS ]
-//Мінімізація CSS файлів
+
 gulp.task('minify-css', function () {
     return gulp.src(dev_patches['css'])
     //.pipe(cssBase64())
@@ -229,7 +175,7 @@ gulp.task('minify-css', function () {
         .pipe(connect.reload());
 });
 
-// [ ПЕРЕВІРКА КОДУ CSS ]
+
 gulp.task('lintCSS', function () {
     return gulp.src(dev_patches['css'])
         .pipe(cached('lintingCSS'))
@@ -241,8 +187,6 @@ gulp.task('lintCSS', function () {
 
 //------------------------------------------------------------------------
 
-// [ ОБРОБКА JS ]
-// [ COMMON JS TASK ]
 gulp.task('scripts', ['minify-js', 'lintJS'], function () {
     return gulp.src(dev_patches['js'])
         .pipe(remember('lintingJS'))
@@ -251,7 +195,6 @@ gulp.task('scripts', ['minify-js', 'lintJS'], function () {
         .pipe(gulp.dest(build_patches['js']));
 });
 
-// [ МІНІФІКАЦІЯ JS ]
 gulp.task('minify-js', function () {
     return gulp.src(build_patches['scripts'] + 'main.js')
         .pipe(rename(build_patches['scripts'] + 'main.min.js'))
@@ -260,7 +203,6 @@ gulp.task('minify-js', function () {
         .pipe(gulp.dest('.'));
 });
 
-// [ ПЕРЕВІРКА КОДУ JS ]
 gulp.task('lintJS', function () {
     return gulp.src(dev_patches['js'])
         .pipe(cached('lintingJS'))
@@ -270,10 +212,8 @@ gulp.task('lintJS', function () {
 });
 //------------------------------------------------------------------------
 
-// [ ОБРОБКА ЗОБРАЖЕНЬ ]
 gulp.task('images', ['image-jpg', 'image-png', 'image-svg']);
 
-// [ ОБРОБКА JPG ]
 gulp.task('image-jpg', function () {
     return gulp.src(dev_patches['images-jpg'])
     // .pipe(imageminJpegtran({progressive: true})())
@@ -281,7 +221,6 @@ gulp.task('image-jpg', function () {
         .pipe(gulp.dest(build_patches['images']));
 });
 
-// [ ОБРОБКА PNG ]
 gulp.task('image-png', function () {
     return gulp.src(dev_patches['images-png'])
         .pipe(imagemin({
@@ -291,7 +230,6 @@ gulp.task('image-png', function () {
         .pipe(gulp.dest(build_patches['images']));
 });
 
-// [ ОБРОБКА SVG ]
 gulp.task('image-svg', function () {
     return gulp.src(dev_patches['images-svg'])
         .pipe(imagemin({
@@ -302,9 +240,6 @@ gulp.task('image-svg', function () {
 });
 //------------------------------------------------------------------------
 
-// [ ПЕРЕВІРКА КОДУ ]
-
-// [ ПЕРЕВІРКА КОДУ HTML ]
 gulp.task('lintHTML', function () {
     return gulp.src('./src/*.html')
         .pipe(cache('lintingHTML'))
